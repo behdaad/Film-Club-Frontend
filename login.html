@@ -4,10 +4,10 @@
   <!-- Standard Meta -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
   <!-- Site Properities -->
-  <title>Welcome</title>
+  <title>Film Club</title>
 
   <link rel="stylesheet" type="text/css" href="dist/semantic.css">
   <link rel="stylesheet" type="text/css" href="dist/components/grid.css">
@@ -16,42 +16,37 @@
   <script src="dist/semantic.js"></script>
 </head>
 <body>
-  <!-- header start -->
-  <div class="ui menu fixed">
-    <a class="active item">
-      <i class="home icon"></i> Timeline
-    </a>
-    <a class="item">
-      <i class="user icon"></i> Profile
-    </a>
-    <a class="item">
-      <i class="setting icon"></i> Settings
-    </a>
-    <a class="item">
-      <i class="announcement sign icon"></i> Notifications
-    </a>
-    <div class="right menu">
-      <div class="item">
-        <div class="ui transparent icon input">
-          <input type="text" placeholder="Search...">
-          <i class="search link icon"></i>
-        </div>
-      </div>
-      <a class="item">
-        <i class="sign out icon"></i> Logout
-      </a>
-    </div>
-  </div>
-  <!-- header end -->
-
   <!-- grid start -->
   <div class="ui page grid">
-    <div class="eight column row">
-
-      <div class="one wide column"></div>
+    <div class="row vertically padded"></div>
+    <div class="row vertically padded"></div>
+    <div class="row">
 
       <!-- sign in form -->
-      <div class="six wide column center aligned vertically padded">
+      <div class="seven wide column vertically padded">
+        <div class="row">
+          <div class="ui message vertically padded">
+            <div class="header">
+              Film Club
+            </div>
+            <ul class="list">
+              <li>The first rule of Film Club is: You do talk about Film Club.</li>
+              <li>The second rule of Film Club is: You do talk about Film Club.</li>
+            </ul>
+          </div>
+          <div class="ui negative message vertically padded">
+            <div class="header">
+              Sign-in unsuccessful
+            </div>
+            The username/password you provided is not registered.
+          </div>
+          <div class="ui positive message vertically padded">
+            <div class="header">
+              Sign-up complete
+            </div>
+            Please check your email. We've sent you an activation link.
+          </div>
+        </div>
         <div class="ui left aligned segment form">
           <div class="field">
             <label>Username</label>
@@ -67,16 +62,34 @@
               <i class="lock icon"></i>
             </div>
           </div>
-          <div class="ui blue submit button">Login</div>
+          <a href="timeline.html">
+            <div class="ui blue submit button">Login</div>
+          </a>
+          <a class="link" href="#" id="forgotPasswordLink">Forgot Password?</a>
         </div>
 
         <div class="ui horizontal divider">Or</div>
-        <div class="center aligned"> <!-- edit: removed centered row -->
+        <div class="center aligned column"> <!-- edit: removed centered row -->
           <div class="large green ui labeled icon button submit" id="signUpButton">
             <i class="signup icon"></i>
             Sign Up
           </div>
         </div>
+
+        <!-- <div class="ui dropdown">
+    <div class="text">Shop</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="header">Categories</div>
+      <div class="item">Clothing</div>
+      <div class="item">Home Goods</div>
+      <div class="item">Bedroom</div>
+      <div class="divider"></div>
+      <div class="header">Order</div>
+      <div class="item">Status</div>
+      <div class="item">Cancellations</div>
+    </div>
+  </div> -->
 
         <!-- sign up modal -->
         <div class="ui modal small right aligned" id="signUpModal">
@@ -91,14 +104,34 @@
                 <input placeholder="Last Name" type="text">
               </div>
             </div>
-            <div class="field">
-              <label>Gender</label>
-              <select class="ui dropdown">
-                <option value="">Gender</option>
-                <option value="1">Male</option>
-                <option value="0">Female</option>
-              </select>
+
+            <div class="two fields">
+              <div class="field">
+                <label>Gender</label>
+                <select class="ui labeled dropdown">
+                  <option value="">Gender</option>
+                  <option value="1"><i class="male icon"></i>Male</option>
+                  <option value="0">Female</option>
+                </select>
+              </div>
+              <div class="field">
+                <div class="date">
+                  <label>Birthday</label>
+                  <div class="ui left icon input">
+                    <input placeholder="Birthday" type="text" />
+                    <i class="birthday icon"></i>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="field">
+              <label>Display Name</label>
+              <div class="ui left icon input">
+                <input placeholder="Display Name" type="text" />
+                <i class="user icon"></i>
+              </div>
+            </div>
+
             <div class="field">
               <label>Username</label>
               <div class="ui left icon input">
@@ -120,6 +153,14 @@
                 <i class="lock icon"></i>
               </div>
             </div>
+            <div class="field">
+              <label>Email</label>
+              <div class="ui left icon input">
+                <input placeholder="Email" type="password">
+                <i class="mail icon"></i>
+              </div>
+            </div>
+
             <div class="inline field">
             </div>
             <div class="actions">
@@ -127,7 +168,7 @@
                 <i class="remove icon"></i>
                 Cancel
               </div>
-              <div class="green ui labeled icon button submit">
+              <div class="green ui labeled icon button submit" id="secondSignUpButton">
                 <i class="signup icon"></i>
                 Sign Up
               </div>
@@ -136,20 +177,56 @@
         </div> <!-- sign up modal end -->
       </div> <!-- six wide column sign in form -->
       <div class="one wide column"></div>
-      <div class="eight wide column">
+      <div class="seven wide column">
         <img class="ui centered image" src="img/fightClub.png" />
       </div>
     </div> <!-- row end -->
   </div> <!--grid end -->
+
+  <!-- Forgot password modal -->
+  <div class="ui modal small right aligned" id="forgotPasswordModal">
+    <div class="ui form segment">
+      <div class="ui positive message">
+        <div class="header">
+          Success
+        </div>
+        A new password was sent to your email.
+      </div>
+      <div class="ui negative message">
+        <div class="header">
+          Error
+        </div>
+        Email you provided was not registered.
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <div class="ui left icon input">
+          <input placeholder="Email" type="text">
+          <i class="mail icon"></i>
+        </div>
+      </div>
+      <div class="ui blue submit button">Resend Password</div>
+    </div>
+  </div>
+  <!-- Forgot password modal end -->
+
   <script>
     var signUpButton = document.getElementById('signUpButton');
     signUpButton.onclick = function()
     {
-      console.log('clicked');
+      // console.log('sign up botton clicked');
       $('#signUpModal').modal('show');
     }
 
-    $('select.dropdown').dropdown();
+    var forgotPasswordLink = document.getElementById('forgotPasswordLink');
+    forgotPasswordLink.onclick = function()
+    {
+      // console.log('forgot password link clicked');
+      $('#forgotPasswordModal').modal('show');
+      return false;
+    }
+
+    $('.ui.dropdown').dropdown();
   </script>
 </body>
 </html>
