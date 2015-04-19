@@ -18,8 +18,7 @@
 <body>
   <!-- grid start -->
   <div class="ui page grid">
-    <div class="row vertically padded"></div>
-    <div class="row vertically padded"></div>
+    <div class="row"></div>
     <div class="row">
 
       <!-- sign in form -->
@@ -44,7 +43,13 @@
             <div class="header">
               Sign-up complete
             </div>
-            Please check your email. We've sent you an activation link.
+            Please check your email. We've sent you an activation email.
+          </div>
+          <div class="ui positive message">
+            <div class="header">
+              Success
+            </div>
+            A new password was sent to your email. You can now login using your username and new password.
           </div>
         </div>
         <div class="ui left aligned segment form">
@@ -76,49 +81,53 @@
           </div>
         </div>
 
-        <!-- <div class="ui dropdown">
-    <div class="text">Shop</div>
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <div class="header">Categories</div>
-      <div class="item">Clothing</div>
-      <div class="item">Home Goods</div>
-      <div class="item">Bedroom</div>
-      <div class="divider"></div>
-      <div class="header">Order</div>
-      <div class="item">Status</div>
-      <div class="item">Cancellations</div>
-    </div>
-  </div> -->
-
         <!-- sign up modal -->
         <div class="ui modal small right aligned" id="signUpModal">
+          <i class="close icon"></i>
           <div class="ui error form segment">
             <div class="two fields">
               <div class="field">
                 <label>First Name</label>
-                <input placeholder="First Name" type="text">
+                <div class="ui left icon input">
+                  <input placeholder="First Name" type="text">
+                  <i class="write icon"></i>
+                </div>
               </div>
               <div class="field">
                 <label>Last Name</label>
-                <input placeholder="Last Name" type="text">
+                <div class="ui left icon input">
+                  <input placeholder="Last Name" type="text">
+                  <i class="write icon"></i>
+                </div>
               </div>
             </div>
 
             <div class="two fields">
               <div class="field">
                 <label>Gender</label>
-                <select class="ui labeled dropdown">
-                  <option value="">Gender</option>
-                  <option value="1"><i class="male icon"></i>Male</option>
-                  <option value="0">Female</option>
-                </select>
+                <div class="ui icon selection dropdown">
+                  <span class="text">
+                    <i class="intergender icon"></i>
+                    Gender
+                  </span>
+                  <i class="dropdown icon"></i>
+                  <div class="menu">
+                    <div class="item">
+                      <i class="female icon"></i>
+                      Female
+                    </div>
+                    <div class="item">
+                      <i class="male icon"></i>
+                      Male
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="field">
-                <div class="date">
-                  <label>Birthday</label>
+                <label>Birthday</label>
+                <div class="three fields">
                   <div class="ui left icon input">
-                    <input placeholder="Birthday" type="text" />
+                    <input placeholder="DD/MM/YYYY" type="text" />
                     <i class="birthday icon"></i>
                   </div>
                 </div>
@@ -185,18 +194,13 @@
 
   <!-- Forgot password modal -->
   <div class="ui modal small right aligned" id="forgotPasswordModal">
+    <i class="close icon"></i>
     <div class="ui form segment">
-      <div class="ui positive message">
-        <div class="header">
-          Success
-        </div>
-        A new password was sent to your email.
-      </div>
       <div class="ui negative message">
         <div class="header">
           Error
         </div>
-        Email you provided was not registered.
+        Email you provided is not registered.
       </div>
       <div class="field">
         <label>Email</label>
