@@ -48,10 +48,17 @@
   <!-- header end -->
 
   <!-- page grid -->
-  <div class="ui page divided grid">
+  <div class="ui page divided grid" style="padding-right: 10px; padding-left: 10px;">
+    <!-- <div class="ui right attached rail">
+      <div class="segment"></div>
+    </div> -->
     <div class="row"></div>
-    <div class="centered row">
-      <div class="eight wide column">
+    <div class="row">
+      <div class="two wide column">
+       <div class="ui segment">
+       </div>   
+      </div>
+      <div class="six wide column">
         <div class="ui segment">
           <div class="ui segment">
             <div class="ui vertical segment">
@@ -83,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div class="six wide column">
+      <div class="four wide column">
         <div class="ui segment">
           <div class="ui vertical segment">
             <div class="ui header">Suggested Movies</div>
@@ -142,34 +149,15 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+      <div class="one wide column">
+        <div class="ui segment"></div>
+      </div>
+      <div class="three wide column">
+        <div class="ui segment"></div>
+      </div>
     </div>
   </div>
-<script>
-  function MyFunction() {
-  var x = 10;
-  var f1 = function() {x += 5;}
-  var f2 = function() {x *= 2;}
-  var f3 = function() {console.log(x);}
-
-  return [f1, f2, f3];
-}
-
-var fn = MyFunction();
-fn[0](); // x = 15
-fn[2](); // "15"
-fn[2](); // "15"
-fn[1](); // x = 30
-
-var fs = MyFunction();
-fs[0](); 
-fs[2]();
-fs[2]();
-fs[1]();
-
-fs[2]();
-</script>
-
 <script>
   $('.ui.rating').rating('disable');
 </script>
