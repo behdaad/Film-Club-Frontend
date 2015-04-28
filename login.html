@@ -21,183 +21,85 @@
     <div class="row"></div>
     <!-- <div class="row"> -->
 
-      <!-- sign in form -->
-      <div class="seven wide column vertically padded">
-        <!-- <div class="row"> -->
-          <div class="ui message vertically padded">
-            <div class="header">
-              Film Club
-            </div>
-            <ul class="list">
-              <li>The first rule of Film Club is: You do talk about Film Club.</li>
-              <li>The second rule of Film Club is: You do talk about Film Club.</li>
-            </ul>
-          </div>
-          <div class="ui negative message vertically padded">
-            <div class="header">
-              Sign-in unsuccessful
-            </div>
-            The username/password you provided is not registered.
-          </div>
-          <div class="ui positive message vertically padded">
-            <div class="header">
-              Sign-up complete
-            </div>
-            Please check your email. We've sent you an activation email.
-          </div>
-          <div class="ui positive message">
-            <div class="header">
-              Success
-            </div>
-            A new password was sent to your email. You can now login using your username and new password.
-          </div>
-        <!-- </div> -->
-        <div class="ui left aligned segment form">
-          <div class="field">
-            <label>Username</label>
-            <div class="ui left icon input">
-              <input type="text" placeholder="Username" />
-              <i class="user icon"></i>
-            </div>
-          </div>
-          <div class="field">
-            <label>Password</label>
-            <div class="ui left icon input">
-              <input type="password" placeholder="Password" />
-              <i class="lock icon"></i>
-            </div>
-          </div>
-          <a href="timeline.html">
-            <div class="ui blue submit button">Login</div>
-          </a>
-          <a class="link" href="#" id="forgotPasswordLink">Forgot Password?</a>
+    <!-- sign in form -->
+    <div class="seven wide column vertically padded">
+      <!-- <div class="row"> -->
+      <div class="ui message vertically padded">
+        <div class="header">
+          Film Club
         </div>
+        <ul class="list">
+          <li>The first rule of Film Club is: You do talk about Film Club.</li>
+          <li>The second rule of Film Club is: You do talk about Film Club.</li>
+        </ul>
+      </div>
+      <div class="ui negative message vertically padded">
+        <div class="header">
+          Sign-in unsuccessful
+        </div>
+        The username/password you provided is not registered.
+      </div>
+      <div class="ui positive message vertically padded">
+        <div class="header">
+          Sign-up complete
+        </div>
+        Please check your email. We've sent you an activation email.
+      </div>
+      <div class="ui positive message">
+        <div class="header">
+          Success
+        </div>
+        A new password was sent to your email. Please follow the instructions sent to you.
+      </div>
+      <!-- </div> -->
 
-        <div class="ui horizontal divider">Or</div>
-        <div class="center aligned column"> <!-- edit: removed centered row -->
-          <div class="large green ui labeled icon button submit" id="signUpButton">
+      <!-- login form -->
+      <form class="ui form segment" action="timeline.html" method="post">
+        <div class="ui error message"></div>
+        <div class="left icon field">
+          <label>Username</label>
+          <div class="ui left icon input">
+            <input placeholder="Username" name="username" type="text">
+            <i class="ui user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="ui left icon input">
+            <input placeholder="Password" type="password" name="password">
+            <i class="ui lock icon"></i>
+          </div>
+        </div>
+        <a href="timeline.html">
+          <div class="ui blue submit button">Login</div>
+        </a>
+        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+      </form>
+      <!-- login form end -->
+
+      <div class="ui horizontal divider">Or</div>
+      <div class="center aligned column"> <!-- edit: removed centered row -->
+        <a class="ui link" href="register.html">
+          <div class="large green ui labeled icon button">
             <i class="signup icon"></i>
             Sign Up
           </div>
-        </div>
-
-        <!-- sign up modal -->
-        <div class="ui modal small right aligned" id="signUpModal">
-          <i class="close icon"></i>
-          <div class="ui error form segment">
-            <div class="two fields">
-              <div class="field">
-                <label>First Name</label>
-                <div class="ui left icon input">
-                  <input placeholder="First Name" type="text">
-                  <i class="write icon"></i>
-                </div>
-              </div>
-              <div class="field">
-                <label>Last Name</label>
-                <div class="ui left icon input">
-                  <input placeholder="Last Name" type="text">
-                  <i class="write icon"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="two fields">
-              <div class="field">
-                <label>Gender</label>
-                <div class="ui icon selection dropdown">
-                  <span class="text">
-                    <i class="intergender icon"></i>
-                    Gender
-                  </span>
-                  <i class="dropdown icon"></i>
-                  <div class="menu">
-                    <div class="item">
-                      <i class="female icon"></i>
-                      Female
-                    </div>
-                    <div class="item">
-                      <i class="male icon"></i>
-                      Male
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="field">
-                <label>Birthday</label>
-                <div class="three fields">
-                  <div class="ui left icon input">
-                    <input placeholder="DD/MM/YYYY" type="text" />
-                    <i class="birthday icon"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <label>Display Name</label>
-              <div class="ui left icon input">
-                <input placeholder="Display Name" type="text" />
-                <i class="user icon"></i>
-              </div>
-            </div>
-
-            <div class="field">
-              <label>Username</label>
-              <div class="ui left icon input">
-                <input placeholder="Username" type="text">
-                <i class="user icon"></i>
-              </div>
-            </div>
-            <div class="field">
-              <label>Password</label>
-              <div class="ui left icon input">
-                <input placeholder="Password" type="password">
-                <i class="lock icon"></i>
-              </div>
-            </div>
-            <div class="field">
-              <label>Repeat Password</label>
-              <div class="ui left icon input">
-                <input placeholder="Repeat Password" type="password">
-                <i class="lock icon"></i>
-              </div>
-            </div>
-            <div class="field">
-              <label>Email</label>
-              <div class="ui left icon input">
-                <input placeholder="Email" type="password">
-                <i class="mail icon"></i>
-              </div>
-            </div>
-
-            <div class="inline field">
-            </div>
-            <div class="actions">
-              <div class="red ui labeled icon button">
-                <i class="remove icon"></i>
-                Cancel
-              </div>
-              <div class="green ui labeled icon button submit" id="secondSignUpButton">
-                <i class="signup icon"></i>
-                Sign Up
-              </div>
-            </div >
-          </div>
-        </div> <!-- sign up modal end -->
-      </div> <!-- six wide column sign in form -->
-      <div class="one wide column"></div>
-      <div class="seven wide column">
-        <img class="ui centered image" src="img/fightClub.png" />
+        </a>
       </div>
+    </div> <!-- six wide column sign in form -->
+    <div class="one wide column"></div>
+    <div class="seven wide column">
+      <img class="ui centered image" src="img/fightClub.png" />
+    </div>
     <!-- </div> -->
     <!-- row end -->
   </div>
   <!-- grid end -->
 
   <!-- Forgot password modal -->
-  <div class="ui modal small right aligned" id="forgotPasswordModal">
+  <div class="ui small right aligned modal" id="forgotPasswordModal">
     <i class="close icon"></i>
-    <div class="ui form segment">
+    <div class="ui form segment" id="forgotForm">
       <div class="ui negative message">
         <div class="header">
           Error
@@ -207,7 +109,7 @@
       <div class="field">
         <label>Email</label>
         <div class="ui left icon input">
-          <input placeholder="Email" type="text">
+          <input placeholder="Email" type="email" name="email">
           <i class="mail icon"></i>
         </div>
       </div>
@@ -217,13 +119,6 @@
   <!-- Forgot password modal end -->
 
   <script>
-    var signUpButton = document.getElementById('signUpButton');
-    signUpButton.onclick = function()
-    {
-      // console.log('sign up botton clicked');
-      $('#signUpModal').modal('show');
-    }
-
     var forgotPasswordLink = document.getElementById('forgotPasswordLink');
     forgotPasswordLink.onclick = function()
     {
@@ -231,8 +126,6 @@
       $('#forgotPasswordModal').modal('show');
       return false;
     }
-
-    $('.ui.dropdown').dropdown();
-  </script>
+</script>
 </body>
 </html>
