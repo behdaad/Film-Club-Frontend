@@ -22,7 +22,7 @@
     <a class="item" href="timeline.html">
       <i class="home icon"></i> Timeline
     </a>
-    <a class="active item" href="userProfile.html">
+    <a class="active item" href="userProfilev2.html">
       <i class="user icon"></i> Profile
     </a>
     <a class="item">
@@ -33,9 +33,11 @@
     </a>
     <div class="right menu">
       <div class="item">
-        <div class="ui transparent icon input">
-          <input type="text" placeholder="Search...">
-          <i class="search link icon"></i>
+        <div class="ui search">
+          <div class="ui transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
         </div>
       </div>
       <a class="item" href="login.html">
@@ -46,65 +48,52 @@
   <!-- header end -->
 
   <!-- page grid -->
-  <div class="ui page divided grid">
+  <div class="ui page divided grid" style="padding-right: 10px; padding-left: 10px;">
+    <!-- <div class="ui right attached rail">
+      <div class="segment"></div>
+    </div> -->
     <div class="row"></div>
-    <div class="centered row"> 
-       <div class="four wide column">
-        <!-- <div class="ui segment"> -->
-          <div class="ui card">
-            <div class="ui medium image">
-              <img src="img/avatar/imageedit_1_7428907632.png">
-            </div>
-            <div class="content">
-              <a class="header">John Doe</a>
-              <div class="meta">
-                <span class="date">Usename: john91</span>
-              </div>
-            </div>
-            <div class="extra content">
-              <a>
-                <i class="user icon"></i>
-                22 Followers
-              </a>
-              <br />
-              <a>
-                <i class="user icon"></i>
-                51 Following
-              </a>
+    <div class="row">
+      <!-- <div class="one wide column"></div> -->
+      <div class="three wide column"> 
+        <div class="ui card">
+          <div class="ui medium image">
+            <img src="img/avatar/imageedit_1_7428907632.png">
+          </div>
+          <div class="content">
+            <a class="header">John Doe</a>
+            <div class="meta">
+              <span class="date">Username: john91</span>
             </div>
           </div>
+          <div class="extra content">
+            <a>
+              <i class="user icon"></i>
+              22 Followers
+            </a>
+            <br>
+            <a>
+              <i class="user icon"></i>
+              51 Following
+            </a>
+          </div>
+        </div>
 
-          <div class="ui labeled icon button">
-            <i class="edit icon"></i>
-            Edit Profile
-          </div>  
-          <!-- <div class="ui segment"> -->
-            <!-- <div class="ui vertical segment">
-              <div class="ui small header">
-              </div>
-            </div>
-            <div class="ui vertical segment">
-              
-            </div>
-            
-            <div class="ui vertical segment">
-            </div> -->
-          <!-- </div> -->
-        <!-- </div> -->
+        <div class="ui labeled icon button">
+          <i class="edit icon"></i>
+          Edit Profile
+        </div>
       </div>
-      <div class="eight wide column">
+
+      <div class="six wide column">
         <div class="ui segment">
           <div class="ui segment">
             <div class="ui vertical segment">
               <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
               <div class="ui small header">
-                You rated Interstellar 8.5/10.
-                <i class="small star icon"></i>
-                <i class="small star icon"></i>
-                <i class="small star icon"></i>
-                <i class="small star half empty icon"></i>
-                <i class="small empty star icon"></i>
+                You rated Interstellar 8/10.
               </div>
+              <div class="ui rating" data-rating="8" data-max-rating="10"></div>
             </div>
             <div class="ui vertical segment">
               <img class="ui small left floated top aligned image" src="img/wireframe/image.png" />
@@ -126,36 +115,112 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="four wide column">
-        <div class="ui segment">
-          <div class="ui vertical segment">
-            <div class="ui list">
-              <div class="ui header">Suggested Movies</div>
-              <div class="item">
-                <img class="ui tiny left floated middle aligned image" src="img/wireframe/image.png" />
-                <div class="ui medium header">Interstellar</div>
-                A movie about science and some unrelated non-sense.
-              </div>
 
-              <div class="item">
-                <img class="ui tiny left floated middle aligned image" src="img/wireframe/image.png" />
-                <div class="ui medium header">Whiplash</div>
-                A movie about a maniac, insane, rude musician.
+          <div class="ui segment">
+            <div class="ui vertical segment">
+              <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
+              <div class="ui small header">
+                You rated Forrest Gump 10/10.
               </div>
-              <div class="item">
-                <img class="ui tiny left floated middle aligned image" src="img/wireframe/image.png" />
-                <div class="ui small header">The Guardians of the Galaxy</div>
-                Blah blah blah, blah blah blah, blah, blah blah, and finally... blah.
+              <div class="ui rating" data-rating="10" data-max-rating="10"></div>
+            </div>
+            <div class="ui vertical segment">
+              <img class="ui small left floated top aligned image" src="img/wireframe/image.png" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="ui vertical segment">
+              <i class="large thumbs outline up icon link icon"></i>
+              Jane Doe and 40 others like this.
+            </div>
+            <div class="ui vertical segment">
+              <i class="large comment outline icon link icon"></i>
+              <div class="ui input">
+                <input type="text" placeholder="Type your comment here." />
               </div>
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+      <!-- <div class="ui vertical divider"></div> -->
+      <div class="four wide column">
+        <div class="ui segment">
+          <div class="ui vertical segment">
+            <div class="ui header">Suggested Movies</div>
+            <div class="ui divided items">
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="img/wireframe/image.png" />
+                </div>
+                <div class="content">
+                  <div class="header">Interstellar</div>
+                  <div class="meta">
+                    <span class="genre">Sci-fi</span>
+                  </div>
+                  <div class="description">
+                    A movie about science and some unrelated non-sense.
+                  </div>
+                  <div class="extra">
+                    Average rating: 8.2/10
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="img/wireframe/image.png" />
+                </div>
+                <div class="content">
+                  <div class="header">Whiplash</div>
+                  <div class="meta">
+                    <span class="genre">Drama<span>
+                  </div>
+                  <div class="description">
+                    A movie about a maniac, insane, rude musician.
+                  </div>
+                  <div class="extra">
+                    Average rating: 7.7/10
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="img/wireframe/image.png" />
+                </div>
+                <div class="content">
+                  <div class="header">Camp X-Ray</div>
+                  <div class="meta">
+                    <span class="genre">War, Drama</span>
+                  </div>
+                  <div class="description">
+                    A movie without a plot. Pretty cool, huh?
+                  </div>
+                  <div class="extra">
+                    Average rating: 2.2/10
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="one wide column">
+        <div class="ui segment"></div>
+      </div> -->
+      <div class="three wide column" style="position: fixed; right: -1%;">
+        <div class="ui segment">
+          <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
+          <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
+          
+        </div>
+      </div>
     </div>
-  </div>      
+  </div>
 <script>
+  $('.ui.rating').rating('disable');
 </script>
 </body>
 </html>
