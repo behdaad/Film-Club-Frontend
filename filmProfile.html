@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- Site Properities -->
+  <title>Film Profile</title>
+
+  <link rel="stylesheet" type="text/css" href="dist/semantic.css" />
+  <link rel="stylesheet" type="text/css" href="dist/components/grid.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="dist/semantic.js"></script>
+</head>
+<body>
+  <!-- header start -->
+  <div class="ui main menu fixed">
+    <a class="item" href="timeline.html">
+      <i class="home icon"></i> Timeline
+    </a>
+    <a class="item" href="userProfilev2.html">
+      <i class="user icon"></i> Profile
+    </a>
+    <a class="item">
+      <i class="setting icon"></i> Settings
+    </a>
+    <a class="item">
+      <i class="announcement sign icon"></i> Notifications
+    </a>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui search">
+          <div class="ui transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+      <a class="item" href="login.html">
+        <i class="sign out icon"></i> Logout
+      </a>
+    </div>
+  </div>
+  <!-- header end -->
+
+  <!-- page grid -->
+  <div class="ui page divided grid" style="padding-right: 10px; padding-left: 10px;">
+    <!-- <div class="ui right attached rail">
+      <div class="segment"></div>
+    </div> -->
+    <div class="row"></div>
+    <div class="row">
+      <!-- <div class="one wide column"></div> -->
+      <div class="three wide column"> 
+        <div class="ui card">
+          <div class="row"></div>
+          <h2 class="ui center aligned header">
+            <i class="film icon" style="padding-left:3%;"></i> 
+            <div class="content">
+              Interstellar
+            </div>
+          </h2>
+          
+          <div class="ui medium image">
+            <img src="img/interstellar1.jpg">
+          </div>
+          <div class="content">
+            <h3 class="center aligned header">A movie about science and some unrelated non-sense.</h3>
+            <!-- <div class="meta">
+              <span class="date">Username: john91</span>
+            </div> -->
+          </div>
+          <div class="extra content">
+            <table class="ui very basic small table">
+              <tbody>
+                <tr>
+                  <td>Director</td>
+                  <td>Christopher Nolan</td>
+                </tr>
+                <tr>
+                  <td>Year</td>
+                  <td>2014</td>
+                </tr>
+                <tr>
+                  <td>Genre</td>
+                  <td>Sci-fi</td>
+                </tr>
+                <tr>
+                  <td>Running time</td>
+                  <td>169 minutes</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>English</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="extra content">
+            <!-- <h2 class="ui header">
+              <img src="/images/icons/plugin.png" style="width:50px;">
+              <div class="content">
+                Plug-ins
+                <div class="sub header">Check out our plug-in marketplace</div>
+              </div>
+            </h2>
+ -->
+            <div class="ui image" style="width:50px;" >
+              <img src="img/imdb_128x128_32.png">
+            </div>
+            <div>
+              Average rate: 7.8/10
+              <br>
+              <a href="#">
+                View Interstellar in IMDb!
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="six wide column">
+        <div class="ui segment">
+          <div class="ui segment">
+            <div class="ui vertical segment">
+              <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
+              <div class="ui small header">
+                John rated Interstellar 8/10.
+              </div>
+              <div class="ui rating" data-rating="8" data-max-rating="10"></div>
+            </div>
+            <div class="ui vertical segment">
+              <img class="ui small left floated top aligned image" src="img/wireframe/image.png" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="ui vertical segment">
+              <i class="large thumbs outline up icon link icon"></i>
+              Jane Doe and 34 others like this.
+            </div>
+            <div class="ui vertical segment">
+              <i class="large comment outline icon link icon"></i>
+              <div class="ui input">
+                <input type="text" placeholder="Type your comment here." />
+              </div>
+            </div>
+          </div>
+
+          <div class="ui segment">
+            <div class="ui vertical segment">
+              <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
+              <div class="ui small header">
+                John rated Forrest Gump 10/10.
+              </div>
+              <div class="ui rating" data-rating="10" data-max-rating="10"></div>
+            </div>
+            <div class="ui vertical segment">
+              <img class="ui small left floated top aligned image" src="img/wireframe/image.png" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="ui vertical segment">
+              <i class="large thumbs outline up icon link icon"></i>
+              Jane Doe and 40 others like this.
+            </div>
+            <div class="ui vertical segment">
+              <i class="large comment outline icon link icon"></i>
+              <div class="ui input">
+                <input type="text" placeholder="Type your comment here." />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="ui vertical divider"></div> -->
+      <div class="four wide column">
+        <div class="ui segment">
+          <div class="ui vertical segment">
+            <div class="ui header">Suggested Movies</div>
+            <div class="ui divided items">
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="img/wireframe/image.png" />
+                </div>
+                <div class="content">
+                  <div class="header">Interstellar</div>
+                  <div class="meta">
+                    <span class="genre">Sci-fi</span>
+                  </div>
+                  <div class="description">
+                    A movie about science and some unrelated non-sense.
+                  </div>
+                  <div class="extra">
+                    Average rating: 8.2/10
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="img/wireframe/image.png" />
+                </div>
+                <div class="content">
+                  <div class="header">Whiplash</div>
+                  <div class="meta">
+                    <span class="genre">Drama<span>
+                  </div>
+                  <div class="description">
+                    A movie about a maniac, insane, rude musician.
+                  </div>
+                  <div class="extra">
+                    Average rating: 7.7/10
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="img/wireframe/image.png" />
+                </div>
+                <div class="content">
+                  <div class="header">Camp X-Ray</div>
+                  <div class="meta">
+                    <span class="genre">War, Drama</span>
+                  </div>
+                  <div class="description">
+                    A movie without a plot. Pretty cool, huh?
+                  </div>
+                  <div class="extra">
+                    Average rating: 2.2/10
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="one wide column">
+        <div class="ui segment"></div>
+      </div> -->
+      <div class="three wide column" style="position: fixed; right: -1%;">
+        <div class="ui segment">
+          <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
+          <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  $('.ui.rating').rating('disable');
+</script>
+</body>
+</html>
