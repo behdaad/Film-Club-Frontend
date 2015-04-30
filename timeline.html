@@ -79,14 +79,67 @@
               </p>
             </div>
             <div class="ui vertical segment">
-              <i class="large thumbs outline up icon link icon"></i>
-              34 people like this.
+              <i class="large comment outline icon link icon commentButton"></i>
+              <i class="large thumbs outline up icon link icon likeButton"></i>
+              <span class="likeText">34 people like this.</span>
             </div>
             <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <a>
-                View 5 comments.
-              </a>
+              <div class="ui comments">
+                <h4 class="ui dividing header">Comments</h4>
+                <form class="ui reply form commentForm">
+                  <div class="field">
+                    <textarea></textarea>
+                  </div>
+                  <div class="ui blue labeled submit icon button addCommentButton">
+                    <i class="icon edit"></i>Add Comment
+                  </div>
+                </form>
+                <div class="comment">
+                  <a class="avatar">
+                    <img src="img/avatar/matt.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author" href="userProfile.html">Matt</a>
+                    <div class="metadata">
+                      <span class="date">Today at 5:42PM</span>
+                    </div>
+                    <div class="text">
+                      How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a class="avatar">
+                    <img src="img/avatar/jenny.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Jenny Hess</a>
+                    <div class="metadata">
+                      <span class="date">Yesterday at 12:30AM</span>
+                    </div>
+                    <div class="text">
+                      <p>This has been very useful for my research. Thanks as well!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a class="avatar">
+                    <img src="img/avatar/joe.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                    <div class="actions">
+                      <a class="reply">Reply</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -110,7 +163,7 @@
             </div>
             <div class="ui vertical segment">
               <i class="large thumbs outline up icon link icon"></i>
-              You and 34 others like this.
+              <span class="likeText">12 others like this.</span>
             </div>
             <div class="ui vertical segment">
               <i class="large comment outline icon link icon"></i>
@@ -140,7 +193,7 @@
             </div>
             <div class="ui vertical segment">
               <i class="large thumbs outline up icon link icon"></i>
-              You and 34 others like this.
+              <span class="likeText">You and 9 others like this.</span>
             </div>
             <div class="ui vertical segment">
               <i class="large comment outline icon link icon"></i>
@@ -335,9 +388,9 @@
   <script>
     $('.ui.rating').rating('disable');
     $('.pop-up')
-      .popup({
-        
-      })
+    .popup({
+
+    })
     ;
   </script>
 </body>
