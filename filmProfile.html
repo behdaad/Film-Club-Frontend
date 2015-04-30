@@ -88,24 +88,24 @@
             <table class="ui very basic small table">
               <tbody>
                 <tr>
-                  <td class="collapsing">Director</td>
-                  <td class="collapsing">Christopher Nolan</td>
+                  <td>Director</td>
+                  <td>Christopher Nolan</td>
                 </tr>
                 <tr>
-                  <td class="collapsing">Year</td>
-                  <td class="collapsing">2014</td>
+                  <td>Year</td>
+                  <td>2014</td>
                 </tr>
                 <tr>
-                  <td class="collapsing">Genre</td>
-                  <td class="collapsing">Sci-fi</td>
+                  <td>Genre</td>
+                  <td>Sci-fi</td>
                 </tr>
                 <tr>
-                  <td class="collapsing">Running time</td>
-                  <td class="collapsing">169 minutes</td>
+                  <td>Running time</td>
+                  <td>169 minutes</td>
                 </tr>
                 <tr>
-                  <td class="collapsing">Language</td>
-                  <td class="collapsing">English</td>
+                  <td>Language</td>
+                  <td>English</td>
                 </tr>
               </tbody>
             </table>
@@ -155,6 +155,12 @@
 
       <div class="six wide column">
         <div class="ui segment">
+          <div class="ui segment">
+            <div class="ui small header">
+              Rate this movie:
+            </div>
+            <div class="ui large rating" data-max-rating="10"></div>
+          </div>
           <div class="ui segment">
             <div class="ui vertical segment">
               <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
@@ -219,65 +225,170 @@
         </div>
       </div>
       <!-- <div class="ui vertical divider"></div> -->
-      <div class="four wide column">
+      <!-- suggestions column -->
+      <div class="four wide computer five wide tablet only column">
+
+        <!-- suggested movies -->
         <div class="ui segment">
-          <div class="ui vertical segment">
-            <div class="ui header">Suggested Movies</div>
-            <div class="ui divided items">
-              <div class="item">
-                <div class="ui tiny image">
-                  <img src="img/wireframe/image.png" />
+          <div class="ui header">Suggested Movies</div>
+          <div class="ui divided items">
+            <div class="item">
+              <a class="ui inline link" href="filmProfile.html">
+                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Interstellar">
+              </a>
+              <div class="content">
+                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
+                <div class="meta">
+                  <span class="genre">Sci-Fi</span>
                 </div>
-                <div class="content">
-                  <div class="header">Interstellar</div>
-                  <div class="meta">
-                    <span class="genre">Sci-fi</span>
-                  </div>
-                  <div class="description">
-                    A movie about science and some unrelated non-sense.
-                  </div>
-                  <div class="extra">
-                    Average rating: 8.2/10
-                  </div>
+                <div class="description">
+                  A movie about science and some unrelated non-sense which was supposed to be completely based on science, but failed miserably in this sense.
+                </div>
+                <div class="extra">
+                  Average rating: 8.2/10
                 </div>
               </div>
-              <div class="item">
-                <div class="ui tiny image">
-                  <img src="img/wireframe/image.png" />
+            </div>
+            <div class="item">
+              <a class="ui link" href="filmProfile.html">
+                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Whiplash">
+              </a>
+              <div class="content">
+                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Whiplash</a></div>
+                <div class="meta">
+                  <span class="genre">Drama</span>
                 </div>
-                <div class="content">
-                  <div class="header">Whiplash</div>
-                  <div class="meta">
-                    <span class="genre">Drama<span>
-                  </div>
-                  <div class="description">
-                    A movie about a maniac, insane, rude musician.
-                  </div>
-                  <div class="extra">
-                    Average rating: 7.7/10
-                  </div>
+                <div class="description">
+                  A movie about a maniac, insane, rude musician.
+                </div>
+                <div class="extra">
+                  Average rating: 7.7/10
                 </div>
               </div>
-              <div class="item">
-                <div class="ui tiny image">
-                  <img src="img/wireframe/image.png" />
+            </div>
+            <div class="item">
+              <a class="ui link" href="filmProfile.html">
+                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Camp X-Ray">
+              </a>
+              <div class="content">
+                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Camp X-Ray</a></div>
+                <div class="meta">
+                  <span class="genre">War, Drama</span>
                 </div>
-                <div class="content">
-                  <div class="header">Camp X-Ray</div>
-                  <div class="meta">
-                    <span class="genre">War, Drama</span>
-                  </div>
-                  <div class="description">
-                    A movie without a plot. Pretty cool, huh?
-                  </div>
-                  <div class="extra">
-                    Average rating: 2.2/10
-                  </div>
+                <div class="description">
+                  A movie without a plot. Pretty cool, huh?
+                </div>
+                <div class="extra">
+                  Average rating: 2.2/10
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- suggested movies end -->
+
+        <!-- suggested users -->
+        <div class="ui segment">
+          <div class="ui header">Users to Follow</div>
+          <div class="ui divided items">
+            <div class="item">
+              <a href="userProfile.html">
+                <img class="ui tiny avatar left floated image" src="img/avatar/stevie.jpg">
+              </a>
+              <div class="ui medium header"><a href="userProfile.html">Stevie Works</a></div>
+              <div class="content">
+                <div class="ui tiny labeled icon button follow">
+                  <i class="add user icon"></i>
+                  Follow
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a href="userProfile.html">
+                <img class="ui tiny avatar left floated image" src="img/avatar/steve.jpg">
+              </a>
+              <div class="ui medium header"><a href="userProfile.html">Steve Careers</a></div>
+              <div class="content">
+                <div class="ui tiny labeled icon button follow">
+                  <i class="add user icon"></i>
+                  Follow
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a href="userProfile.html">
+                <img class="ui tiny avatar left floated image" src="img/avatar/elliot.jpg">
+              </a>
+              <div class="ui medium header"><a href="userProfile.html">Elliot Occupations</a></div>
+              <div class="content">
+                <div class="ui tiny labeled icon button follow">
+                  <i class="remove user icon"></i>
+                  Follow
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- suggested users end -->
+
+        <!-- popular movies -->
+        <div class="ui segment">
+          <div class="ui header">Popular Movies</div>
+          <div class="ui divided items">
+            <div class="item">
+              <a class="ui link" href="filmProfile.html">
+                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Enter the Matrix">
+              </a>
+              <div class="content">
+                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Enter the Matrix</a></div>
+                <div class="meta">
+                  <span class="genre">Fantasy, Sci-Fi</span>
+                </div>
+                <div class="description">
+                  Haven't you seen Matrix? Leave this site. Now.
+                </div>
+                <div class="extra">
+                  Average rating: 9.8/10
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="ui link" href="filmProfile.html">
+                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Fight Club">
+              </a>
+              <div class="content">
+                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Fight Club</a></div>
+                <div class="meta">
+                  <span class="genre">Drama</span>
+                </div>
+                <div class="description">
+                  I can't believe there still exists some people on the face of Earth, who hasen't watched Fight Club. Get. Out. Now.
+                </div>
+                <div class="extra">
+                  Average rating: 9.7/10
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="ui link" href="filmProfile.html">
+                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Pursuit of Happyness">
+              </a>
+              <div class="content">
+                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Pursuit of Happyness</a></div>
+                <div class="meta">
+                  <span class="genre">Drama</span>
+                </div>
+                <div class="description">
+                  So you thought 'happyness' is a typo. Go to hell and watch this masterpiece.
+                </div>
+                <div class="extra">
+                  Average rating: 9.5/10
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- popular movies end -->
       </div>
       <!-- <div class="one wide column">
         <div class="ui segment"></div>
@@ -292,7 +403,9 @@
     </div>
   </div>
 <script>
-  $('.ui.rating').rating('disable');
+  // $('.ui.rating').rating('enable');
+  $('.ui .rating').rating('setting', 'clearable', true)
+;
 </script>
 </body>
 </html>
