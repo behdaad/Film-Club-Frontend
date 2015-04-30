@@ -159,7 +159,8 @@
             <div class="ui small header">
               Rate this movie:
             </div>
-            <div class="ui large rating" data-max-rating="10"></div>
+            <div class="ui large rating" data-max-rating="10" id="commentWindow"></div>
+            <!-- <a href="#" id="commentWindow"><div class="ui large rating" data-max-rating="10"></div></a> -->
           </div>
           <div class="ui segment">
             <div class="ui vertical segment">
@@ -402,10 +403,108 @@
       </div>
     </div>
   </div>
-<script>
-  // $('.ui.rating').rating('enable');
-  $('.ui .rating').rating('setting', 'clearable', true)
-;
-</script>
+
+  <!-- Comment Window modal -->
+  <!-- <div class="ui small right aligned modal" id="commentWindowModel">
+    <i class="close icon"></i>
+    <div class="ui form segment" id="forgotForm">
+      <div class="ui negative message">
+        <div class="header">
+          Error
+        </div>
+        Email you provided is not registered.
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <div class="ui left icon input">
+          <input placeholder="Email" type="email" name="email">
+          <i class="mail icon"></i>
+        </div>
+      </div>
+      <div class="ui blue submit button">Resend Password</div>
+    </div>
+  </div> -->
+  <!-- <div class="ui dimmer modals page transition visible active" id="commentWindowModel"> -->
+  <!-- transition scrolling visible active -->
+  <!-- class="ui fullscreen modal transition scrolling visible" id="commentWindowModel" style="top: 835px;" -->
+  <!-- right aligned  -->
+    <div class="ui large modal" id="commentWindowModel">
+      <!-- <i class="close icon"></i> -->
+      <div class="header">If You'd Like, Share Your Opinion!</div>
+      <div class="content">
+        <div class="ui small image">
+          <img src="img/interstellar1.jpg">
+        </div>
+        <div class="description" style="width:20%;">
+          <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
+          <div class="extra">
+            Your Rate: 8/10
+          </div>
+        </div>
+
+        <div class="ui form">
+          <h4 class="ui dividing header">Please Write Your Opinion </h4>
+          <div class="field">
+            <!-- <label>Feedback</label> -->
+            <textarea></textarea>
+          </div>
+          <!-- <div class="field">
+            <div class="ui checkbox checked">
+              <input type="checkbox" checked="checked" name="contact-me">
+              <label>It's OK.</label>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+
+        <!-- <img class="ui tiny left floated image" src="img/interstellar1.jpg" alt="Interstellar"> -->
+        <!-- <div class="item">
+          <div class="content">
+            <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
+      
+            <div class="extra">
+              Your Rate: 8.2/10
+            </div>
+          </div>
+        </div> -->
+      
+      
+      <!-- <div class="content"> -->
+        <!-- <div class="ui horizontal divider"></div> -->
+        <!-- <div class="ui form"> -->
+          <!-- <h4 class="ui dividing header">Please Write Your Opinion </h4> -->
+          <!-- <div class="field"> -->
+            <!-- <label>Feedback</label> -->
+            <!-- <textarea></textarea> -->
+          <!-- </div> -->
+          <!-- <div class="field">
+            <div class="ui checkbox checked">
+              <input type="checkbox" checked="checked" name="contact-me">
+              <label>It's OK.</label>
+            </div>
+          </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      <div class="actions">
+        <div class="ui button">Cancel</div>
+        <div class="ui green button">Confirm</div>
+      </div>
+    </div>
+  <!-- </div> -->
+  <!-- Forgot password modal end -->
+
+  <script>
+    // $('.ui.rating').rating('enable');
+    $('.ui .rating').rating('setting', 'clearable', true);
+
+    var commentWindowLink = document.getElementById('commentWindow');
+    commentWindowLink.onclick = function()
+    {
+      // console.log('forgot password link clicked');
+      $('#commentWindowModel').modal('show');
+      return false;
+    }
+  </script>
 </body>
 </html>
