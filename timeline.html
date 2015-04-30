@@ -63,7 +63,7 @@
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/stevie.jpg" />
               <div class="ui small header">
-                <a href="userProfile.html">Stevie</a> rated <a href="filmProfile.html">Camp X-Ray</a> 4/10.
+                <a href="userProfile.html">Stevie</a> rated <a href="filmProfile.html"><span class="pop-up" data-content="Director: Peter Sattler Average Rate on IMDb: 7.1/10" data-variation="huge">Camp X-Ray</span></a> 4/10.
               </div>
               <div class="ui rating" data-rating="4" data-max-rating="10"></div>
               <br />
@@ -94,7 +94,7 @@
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" />
               <div class="ui small header">
-                <a href="userProfile.html">Steve</a> rated <a href="filmProfile.html">Interstellar</a> 7/10.
+                <a href="userProfile.html">Steve</a> rated <a href="filmProfile.html"><span class="pop-up" data-content="Director: Christopher Nolan Average Rate on IMDb: 8.7/10" data-variation="huge">Interstellar</span></a> 7/10.
               </div>
               <div class="ui rating" data-rating="7" data-max-rating="10"></div>
               <a href="singlePost.html"><div class="date">3 weeks ago</div></a>
@@ -124,7 +124,7 @@
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/elliot.jpg" />
               <div class="ui small header">
-                <a href="userProfile.html">Elliot</a> rated <a href="filmProfile.html">Man of Steel</a> 4/10.
+                <a href="userProfile.html">Elliot</a> rated <a href="filmProfile.html"><span class="pop-up" data-content="Director: Zack Snyderous Average Rate on IMDb: 7.2/10" data-variation="huge">Man of Steel</span></a> 4/10.
               </div>
               <div class="ui rating" data-rating="4" data-max-rating="10"></div>
               <a href="singlePost.html"><div class="date">7 months ago</div></a>
@@ -334,6 +334,11 @@
   </div>
   <script>
     $('.ui.rating').rating('disable');
+    $('.pop-up')
+      .popup({
+        
+      })
+    ;
   </script>
 </body>
 </html>
