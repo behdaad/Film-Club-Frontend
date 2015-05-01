@@ -33,11 +33,17 @@
     </a>
     <div class="right menu">
       <div class="item">
+        <img class="ui image" src="img/LOGO.png" height="20">
+      </div>
+      <div class="item">
         <div class="ui search">
-          <div class="ui transparent icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search link icon"></i>
-          </div>
+          <form action="search.html" method="get" id="searchForm">
+            <div class="ui transparent icon input">
+              <input class="prompt" type="text" placeholder="Search..." name="query">
+              <span id="searchIconSpan"><i class="search link icon" id="searchIcon"></i></span>
+            </div>
+          </form>
+          <div class="results" style="left: -20px;"></div>
         </div>
       </div>
       <a class="item" href="login.html">
@@ -55,7 +61,6 @@
     <div class="row"></div>
     <div class="row">
       <div class="three wide computer only column"></div> <!-- empty column, left -->
-
       <!-- main column -->
       <div class="six wide computer eleven wide tablet sixteen wide mobile column">
         <div class="ui segment">
@@ -85,15 +90,15 @@
             </div>
             <div class="ui vertical segment">
               <div class="ui comments">
-                <h4 class="ui dividing header">Comments</h4>
                 <form class="ui reply form commentForm">
                   <div class="field">
-                    <textarea></textarea>
+                    <textarea rows="2" placeholder="Type your comment..." style="max-height: 200px;"></textarea>
                   </div>
                   <div class="ui blue labeled submit icon button addCommentButton">
                     <i class="icon edit"></i>Add Comment
                   </div>
                 </form>
+                <h4 class="ui dividing header">Comments</h4>
                 <div class="comment">
                   <a class="avatar">
                     <img src="img/avatar/matt.jpg">
@@ -133,9 +138,6 @@
                     </div>
                     <div class="text">
                       Dude, this is awesome. Thanks so much
-                    </div>
-                    <div class="actions">
-                      <a class="reply">Reply</a>
                     </div>
                   </div>
                 </div>
@@ -387,11 +389,46 @@
   </div>
   <script>
     $('.ui.rating').rating('disable');
-    $('.pop-up')
-    .popup({
+    $('.pop-up').popup({});
 
-    })
-    ;
-  </script>
+    var
+  content = [
+    {
+      title: 'Steve Jobs',
+      description: 'User',
+    },
+    {
+      title: 'Steve Jobs',
+      description: 'Movie',
+    },
+    {
+      title: 'Jobs',
+      description: 'Movie',
+    },
+    {
+      title: 'Inside Job',
+      description: 'Movie',
+    },
+    {
+      title: 'The Italian Job',
+      description: 'Movie',
+    },
+  ];
+$('.ui.search')
+  .search({
+    source : content,
+    searchFields   : [
+      'title'
+    ],
+    searchFullText: true,
+  });
+  $('#searchIconSpan').onclick = function()
+  {
+    // $('#searchForm').submit();
+    console.log("form submitted");
+  }
+
+  $('#searchIconSpan').click();  
+</script>
 </body>
 </html>
