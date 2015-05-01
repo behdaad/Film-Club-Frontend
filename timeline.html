@@ -18,7 +18,7 @@
 </head>
 <body>
   <!-- header start -->
-  <div class="ui main menu fixed">
+  <div class="ui fixed menu">
     <a class="active item" href="timeline.html">
       <i class="home icon"></i> Timeline
     </a>
@@ -28,9 +28,42 @@
     <a class="item">
       <i class="setting icon"></i> Settings
     </a>
-    <a class="item">
-      <i class="announcement sign icon"></i> Notifications
+    <a class="item" id="notificationsItem">
+      <i class="announcement sign icon"></i>Notifications
     </a>
+    <div class="ui very wide popup" id="notificationsPopup">
+      <div class="ui divided list">
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/elliot.jpg">
+          <div class="content">
+            <a class="header">Elliot Hemmingway</a>
+            <div class="description">Liked your post.</div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/stevie.jpg">
+          <div class="content">
+            <a class="header">Stevie Penguin</a>
+            <div class="description">Commented on your post.</div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/steve.jpg">
+          <div class="content">
+            <a class="header">Steve Cook</a>
+            <div class="description">Started to follow you.</div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/jenny.jpg">
+          <div class="content">
+            <a class="header">Jenny Hess</a>
+            <div class="description">Commented on a post you've commented on.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="right menu">
       <div class="item">
         <img class="ui image" src="img/LOGO.png" height="20">
@@ -55,12 +88,10 @@
 
   <!-- page grid -->
   <div class="ui page grid" style="padding-right: 10px; padding-left: 10px;">
-    <!-- <div class="ui right attached rail">
-      <div class="segment"></div>
-    </div> -->
     <div class="row"></div>
     <div class="row">
       <div class="three wide computer only column"></div> <!-- empty column, left -->
+      
       <!-- main column -->
       <div class="six wide computer eleven wide tablet sixteen wide mobile column">
         <div class="ui segment">
@@ -68,7 +99,7 @@
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/stevie.jpg" />
               <div class="ui small header">
-                <a href="userProfile.html">Stevie</a> rated <a href="filmProfile.html"><span class="pop-up" data-content="Director: Peter Sattler Average Rate on IMDb: 7.1/10" data-variation="huge">Camp X-Ray</span></a> 4/10.
+                <a href="userProfile.html">Stevie</a> rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Peter Sattler Average Rate on IMDb: 7.1/10" data-variation="huge">Camp X-Ray</span></a> 4/10.
               </div>
               <div class="ui rating" data-rating="4" data-max-rating="10"></div>
               <br />
@@ -149,7 +180,7 @@
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" />
               <div class="ui small header">
-                <a href="userProfile.html">Steve</a> rated <a href="filmProfile.html"><span class="pop-up" data-content="Director: Christopher Nolan Average Rate on IMDb: 8.7/10" data-variation="huge">Interstellar</span></a> 7/10.
+                <a href="userProfile.html">Steve</a> rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Christopher Nolan Average Rate on IMDb: 8.7/10" data-variation="huge">Interstellar</span></a> 7/10.
               </div>
               <div class="ui rating" data-rating="7" data-max-rating="10"></div>
               <a href="singlePost.html"><div class="date">3 weeks ago</div></a>
@@ -179,7 +210,7 @@
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/elliot.jpg" />
               <div class="ui small header">
-                <a href="userProfile.html">Elliot</a> rated <a href="filmProfile.html"><span class="pop-up" data-content="Director: Zack Snyderous Average Rate on IMDb: 7.2/10" data-variation="huge">Man of Steel</span></a> 4/10.
+                <a href="userProfile.html">Elliot</a> rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Zack Snyderous Average Rate on IMDb: 7.2/10" data-variation="huge">Man of Steel</span></a> 4/10.
               </div>
               <div class="ui rating" data-rating="4" data-max-rating="10"></div>
               <a href="singlePost.html"><div class="date">7 months ago</div></a>
@@ -220,7 +251,7 @@
                 <img class="ui tiny left floated rounded bordered image" src="img/interstellar2.jpg" alt="Interstellar" style="margin-bottom:6%;">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
+                <a class="ui medium header" href="filmProfile.html">Interstellar</a>
                 <div class="meta">
                   <span class="genre">Sci-Fi</span>
                 </div>
@@ -237,7 +268,7 @@
                 <img class="ui tiny left floated rounded bordered image" src="img/WHIPLASH+onesheet.jpg" alt="Whiplash">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Whiplash</a></div>
+                <a class="ui medium header" href="filmProfile.html">Whiplash</a>
                 <div class="meta">
                   <span class="genre">Drama</span>
                 </div>
@@ -254,7 +285,7 @@
                 <img class="ui tiny left floated rounded bordered image" src="img/camp_xray_xlg.jpg" alt="Camp X-Ray">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Camp X-Ray</a></div>
+                <a class="ui medium header" href="filmProfile.html">Camp X-Ray</a>
                 <div class="meta">
                   <span class="genre">War, Drama</span>
                 </div>
@@ -273,12 +304,12 @@
         <!-- suggested users -->
         <div class="ui segment">
           <div class="ui header">Users to Follow</div>
-          <div class="ui divided items">
+          <div class="ui divided list">
             <div class="item">
               <a href="userProfile.html">
                 <img class="ui tiny avatar left floated image" src="img/avatar/stevie.jpg">
               </a>
-              <div class="ui medium header"><a href="userProfile.html">Stevie Works</a></div>
+              <a class="ui medium header" href="userProfile.html">Stevie Works</a>
               <div class="content">
                 <div class="ui tiny labeled icon button follow">
                   <i class="add user icon"></i>
@@ -290,7 +321,7 @@
               <a href="userProfile.html">
                 <img class="ui tiny avatar left floated image" src="img/avatar/steve.jpg">
               </a>
-              <div class="ui medium header"><a href="userProfile.html">Steve Careers</a></div>
+              <a class="ui medium header" href="userProfile.html">Steve Careers</a>
               <div class="content">
                 <div class="ui tiny labeled icon button follow">
                   <i class="add user icon"></i>
@@ -302,7 +333,7 @@
               <a href="userProfile.html">
                 <img class="ui tiny avatar left floated image" src="img/avatar/elliot.jpg">
               </a>
-              <div class="ui medium header"><a href="userProfile.html">Elliot Occupations</a></div>
+              <a class="ui medium header" href="userProfile.html">Elliot Occupations</a>
               <div class="content">
                 <div class="ui tiny labeled icon button follow">
                   <i class="remove user icon"></i>
@@ -323,7 +354,7 @@
                 <img class="ui tiny left floated rounded bordered image" src="img/123.jpg" alt="Enter the Matrix">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Enter the Matrix</a></div>
+                <a class="ui medium header" href="filmProfile.html">Enter the Matrix</a>
                 <div class="meta">
                   <span class="genre">Fantasy, Sci-Fi</span>
                 </div>
@@ -340,7 +371,7 @@
                 <img class="ui tiny left floated rounded bordered image" src="img/456.jpg" alt="Fight Club" style="margin-bottom:7%;">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Fight Club</a></div>
+                <a class="ui medium header" href="filmProfile.html">Fight Club</a>
                 <div class="meta">
                   <span class="genre">Drama</span>
                 </div>
@@ -357,7 +388,7 @@
                 <img class="ui tiny left floated rounded bordered image" src="img/The-Pursuit-of-Happyness-Poster.jpg" alt="Pursuit of Happyness">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Pursuit of Happyness</a></div>
+                <a class="ui medium header" href="filmProfile.html">Pursuit of Happyness</a>
                 <div class="meta">
                   <span class="genre">Drama</span>
                 </div>
@@ -389,20 +420,19 @@
   </div>
   <script>
     $('.ui.rating').rating('disable');
-    $('.pop-up').popup({});
+    $('.film.popup').popup({});
+    $('#notificationsItem').popup({
+      on: 'click',
+      inline: true
+    });
 
-    var
-  content = [
+    var content = [
     {
       title: 'Steve Jobs',
       description: 'User',
     },
     {
       title: 'Steve Jobs',
-      description: 'Movie',
-    },
-    {
-      title: 'Jobs',
       description: 'Movie',
     },
     {
@@ -413,22 +443,40 @@
       title: 'The Italian Job',
       description: 'Movie',
     },
-  ];
-$('.ui.search')
-  .search({
-    source : content,
-    searchFields   : [
+    {
+      title: 'Enter the Matrix',
+      description: 'Movie'
+    },
+    {
+      title: 'Matrix Reloaded',
+      description: 'Movie'
+    },
+    {
+      title: 'Matrix Revolutions',
+      description: 'Movie'
+    },
+    {
+      title: 'Steven Wilson',
+      description: 'User'
+    }
+    ];
+    $('.ui.search').search(
+    {
+      source: content,
+      searchFields: [
       'title'
-    ],
-    searchFullText: true,
-  });
-  $('#searchIconSpan').onclick = function()
-  {
-    // $('#searchForm').submit();
-    console.log("form submitted");
-  }
+      // 'description'
+      ]
+    }
+    );
 
-  $('#searchIconSpan').click();  
-</script>
+    $('#searchIconSpan').onclick = function()
+    {
+      // $('#searchForm').submit();
+      console.log("form submitted");
+    }
+
+    $('#searchIconSpan').click();  
+  </script>
 </body>
 </html>
