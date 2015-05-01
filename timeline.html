@@ -66,7 +66,7 @@
 
     <div class="right menu">
       <div class="item">
-        <img class="ui image" src="img/LOGO.png" height="20">
+        <a href="timeline.html"><img class="ui image" src="img/LOGO.png" height="20"></a>
       </div>
       <div class="item">
         <div class="ui search">
@@ -76,7 +76,7 @@
               <span id="searchIconSpan"><i class="search link icon" id="searchIcon"></i></span>
             </div>
           </form>
-          <div class="results" style="left: -20px;"></div>
+          <div class="results" style="left: -11px;" id="searchResults" style="z-index: 999;"></div>
         </div>
       </div>
       <a class="item" href="login.html">
@@ -115,18 +115,20 @@
               </p>
             </div>
             <div class="ui vertical segment">
-              <i class="large comment outline icon link icon commentButton"></i>
               <i class="large thumbs outline up icon link icon likeButton"></i>
               <span class="likeText">34 people like this.</span>
-            </div>
-            <div class="ui vertical segment">
+            <!-- </div>
+            <div class="ui vertical segment"> -->
               <div class="ui comments">
                 <form class="ui reply form commentForm">
                   <div class="field">
-                    <textarea rows="2" placeholder="Type your comment..." style="max-height: 200px;"></textarea>
-                  </div>
-                  <div class="ui blue labeled submit icon button addCommentButton">
-                    <i class="icon edit"></i>Add Comment
+                    <div class="ui action input">
+                      <input type="text" placeholder="Type your comment...">
+                      <button class="ui blue right labeled icon button commentButton">
+                        <i class="massive comment outline icon"></i>
+                        Comment
+                      </button>
+                    </div>
                   </div>
                 </form>
                 <h4 class="ui dividing header">Comments</h4>
@@ -407,13 +409,15 @@
       <!-- suggestions column end -->
 
       <!-- chat column -->
-      <div class="three wide computer only column" style="position: fixed; right: -1%;">
-        <div class="ui segment">
-          <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
-          <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
-
+      <div class="three wide computer only fixed column" style="z-index: 1;">
+        <div class="ui sticky fixed">
+          <div class="ui segment">
+            <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
+            <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
+          </div>
         </div>
       </div>
+    </div>
       <!-- chat column end -->
 
     </div>
@@ -423,7 +427,8 @@
     $('.film.popup').popup({});
     $('#notificationsItem').popup({
       on: 'click',
-      inline: true
+      inline: true,
+      transition: 'fade down'
     });
 
     var content = [
@@ -463,10 +468,8 @@
     $('.ui.search').search(
     {
       source: content,
-      searchFields: [
-      'title'
-      // 'description'
-      ]
+      searchFields: [ 'title' ],
+      transition: 'fade down'
     }
     );
 
