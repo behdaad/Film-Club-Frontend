@@ -504,8 +504,11 @@
     commentWindowLink.onclick = function()
     {
       var rateValue = $('#commentWindow').rating('get rating');
-      $('#rating').text(rateValue);
-      $('#commentWindowModel').modal('show');
+      if (rateValue > 0)
+      {
+        $('#rating').text(rateValue);
+        $('#commentWindowModel').modal('show');
+      }
       return false;
     }
   </script>
