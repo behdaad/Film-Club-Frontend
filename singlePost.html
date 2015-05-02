@@ -103,39 +103,109 @@
         
           <div class="ui segment">
             <div class="ui vertical segment">
-              <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/stevie.jpg" />
+              <a href="userProfile.html">
+                <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/stevie.jpg" />
+              </a>
               <div class="ui small header">
-                <a href="userProfile.html">Stevie</a> rated <a href="filmProfile.html">Camp X-Ray</a> 4/10.
+                <a href="userProfile.html">Stevie</a> rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Peter Sattler Average Rate: 7.1/10" data-variation="huge">Camp X-Ray</span></a> 4/10.
               </div>
               <div class="ui rating" data-rating="4" data-max-rating="10"></div>
               <br />
               <a href="singlePost.html"><div class="date">2 hours ago</div></a>
             </div>
             <div class="ui vertical segment">
-              <img class="ui small left floated top aligned image" src="img/wireframe/image.png" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div class="ui vertical segment">
-              <i class="large thumbs outline up icon link icon"></i>
-              34 people like this.
-            </div>
-            <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <a>
-                View 5 comments.
+              <a href="filmProfile.html">
+                <img class="ui small left floated top aligned rounded bordered image" alt="Camp X-Ray" src="img/posters/camp_xray_xlg.jpg" />
               </a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
             </div>
+
+            <!-- like segment -->
             <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <div class="ui input">
-                <input type="text" placeholder="Type your comment here." />
+              <div class="ui grid">
+                <div class="row">
+                  <div class="eight wide column" style="padding-left: 15px; width: 120px !important;">
+                    <div class="ui basic labeled left icon blue button likeButton" id="likeButton1">
+                      <i class="thumbs outline up icon"></i>
+                      Like
+                    </div>
+                  </div>
+                  <div class="eight wide column">
+                    <div class="ui mini horizontal statistic" style="margin-top: 5px;">
+                      <div class="value likeCount" id="likeCount1">34</div>
+                      <div class="label">people like this.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- like segment end -->
+
+            <!-- comments segment -->
+            <div class="ui vertical segment">
+              <form class="ui reply form commentForm">
+                <div class="field">
+                  <div class="ui action input">
+                    <input type="text" placeholder="Type your comment..." id="commentText1">
+                    <button class="ui small blue right labeled icon button commentButton" id="commentButton1">
+                      <i class="comment outline icon"></i>
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h4 class="ui dividing header"><span id="commentsCount1">3</span> Comments</h4>
+              <div class="ui comments" id="comments1">
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/matt.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author" href="userProfile.html">Matt Telbas</a>
+                    <div class="metadata">
+                      <span class="date">Today at 5:42PM</span>
+                    </div>
+                    <div class="text">
+                      How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/jenny.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Jenny Hess</a>
+                    <div class="metadata">
+                      <span class="date">Yesterday at 12:30AM</span>
+                    </div>
+                    <div class="text">
+                      <p>This has been very useful for my "research". Thanks as well!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/joe.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- comments segment end -->
           </div>
       </div>
       <!-- main column end -->
