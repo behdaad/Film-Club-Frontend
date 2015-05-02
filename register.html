@@ -43,7 +43,7 @@
               </div>
             </div>
             
-            <div class="two fields">
+            <!-- <div class="two fields">
               <div class="field">
                 <label>Birthday</label>
                 <select class="ui dropdown" name="day">
@@ -99,14 +99,20 @@
                   <option value="12">December</option>
                 </select>
               </div>
-            </div>
+            </div> -->
 
             <div class="two fields">
-              <div class="field">
+              <!-- <div class="field">
                 <label>Year</label>
                 <div class="ui labeled input">
                   <div class="ui label">19</div>
                   <input placeholder="Year" type="text" name="year" />
+                </div>
+              </div> -->
+              <div class="field">
+                <div class="field">
+                  <label>Date</label>
+                  <input placeholder="DD/MM/YYYY" type="date" name="date">
                 </div>
               </div>
               <div class="field">
@@ -158,10 +164,6 @@
                 <i class="mail icon"></i>
               </div>
             </div>
-            <div class="field">
-              <label>Date</label>
-              <input type="date">
-            </div>
             <div class="green ui labeled icon submit button">
               <i class="signup icon"></i>
               Sign Up
@@ -209,45 +211,54 @@
         }
         ]
       },
-      day: {
-        identifier : 'day',
+      date: {
+        identifier : 'date',
         rules: [
         {
           type   : 'empty',
-          prompt : 'Please select your birthday.'
+          prompt : 'Please enter your birthday.'
         }
         ]
       },
-      month: {
-        identifier : 'month',
-        rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please select your birthday month.'
-        }
-        ]
-      },
-      year: {
-        identifier : 'year',
-        rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter your birthday year.'
-        },
-        {
-          type   : 'integer',
-          prompt : 'Please enter a valid year.'
-        },
-        {
-          type   : 'maxLength[2]',
-          prompt : 'Seriously?! You are born into future?'
-        },
-        {
-          type   : 'length[2]',
-          prompt : 'Oh come on! You are at least 1700 years old?'
-        }
-        ]
-      },
+      // day: {
+      //   identifier : 'day',
+      //   rules: [
+      //   {
+      //     type   : 'empty',
+      //     prompt : 'Please select your birthday.'
+      //   }
+      //   ]
+      // },
+      // month: {
+      //   identifier : 'month',
+      //   rules: [
+      //   {
+      //     type   : 'empty',
+      //     prompt : 'Please select your birthday month.'
+      //   }
+      //   ]
+      // },
+      // year: {
+      //   identifier : 'year',
+      //   rules: [
+      //   {
+      //     type   : 'empty',
+      //     prompt : 'Please enter your birthday year.'
+      //   },
+      //   {
+      //     type   : 'integer',
+      //     prompt : 'Please enter a valid year.'
+      //   },
+      //   {
+      //     type   : 'maxLength[2]',
+      //     prompt : 'Seriously?! You are born into future?'
+      //   },
+      //   {
+      //     type   : 'length[2]',
+      //     prompt : 'Oh come on! You are at least 1700 years old?'
+      //   }
+      //   ]
+      // },
       gender: {
         identifier : 'gender',
         rules: [
