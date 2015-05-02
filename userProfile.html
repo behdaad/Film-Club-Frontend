@@ -375,117 +375,21 @@
       <!-- suggestions column end -->
       
       <!-- chat column -->
-      <div class="three wide computer only fixed column" style="z-index: 1;">
-        <div class="ui sticky fixed">
+      <div class="three wide computer only fixed column" style="z-index: 1; position: fixed; right: -1%;">
+        <!-- <div class="ui sticky fixed"> -->
         <div class="ui segment">
           <div class="ui vertical segment">
-            <div class="segment">
-              <div class="ui divided list" style="height:400px; overflow-y:scroll;">
-                <div class="item">
+            <div class="segment" style="height:389px; overflow-y:scroll;">
+              <div class="ui divided list">
+
+                <div class="item" id="chat">
                   <i class="right floated compact ui green circle icon"></i>
                   <img class="ui avatar image" src="img/avatar/elliot.jpg">
                   <div class="content">
                     <div class="header">Justen Kitsune</div>
                   </div>
                 </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/joe.jpg">
-                  <div class="content">
-                    <div class="header">Joe Henderson</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/stevie.jpg">
-                  <div class="content">
-                    <div class="header">Stevie Works</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/steve.jpg">
-                  <div class="content">
-                    <div class="header">Steve Careers</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/elliot.jpg">
-                  <div class="content">
-                    <div class="header">Elliot Occupations</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/matt.jpg">
-                  <div class="content">
-                    <div class="header">Matt Donovan</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/jenny.jpg">
-                  <div class="content">
-                    <div class="header">Jenny Lewis</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/joe.jpg">
-                  <div class="content">
-                    <div class="header">Joe Henderson</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/elliot.jpg">
-                  <div class="content">
-                    <div class="header">Justen Kitsune</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/joe.jpg">
-                  <div class="content">
-                    <div class="header">Joe Henderson</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/stevie.jpg">
-                  <div class="content">
-                    <div class="header">Stevie Works</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/steve.jpg">
-                  <div class="content">
-                    <div class="header">Steve Careers</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/elliot.jpg">
-                  <div class="content">
-                    <div class="header">Elliot Occupations</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/matt.jpg">
-                  <div class="content">
-                    <div class="header">Matt Donovan</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <i class="right floated compact ui green circle icon"></i>
-                  <img class="ui avatar image" src="img/avatar/jenny.jpg">
-                  <div class="content">
-                    <div class="header">Jenny Lewis</div>
-                  </div>
-                </div>
+
                 <div class="item">
                   <i class="right floated compact ui green circle icon"></i>
                   <img class="ui avatar image" src="img/avatar/joe.jpg">
@@ -494,14 +398,126 @@
                   </div>
                 </div>
 
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/stevie.jpg">
+                  <div class="content">
+                    <div class="header">Stevie Works</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/steve.jpg">
+                  <div class="content">
+                    <div class="header">Steve Careers</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui green circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/elliot.jpg">
+                  <div class="content">
+                    <div class="header">Elliot Occupations</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui green circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/matt.jpg">
+                  <div class="content">
+                    <div class="header">Matt Donovan</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/jenny.jpg">
+                  <div class="content">
+                    <div class="header">Jenny Lewis</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui green circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/joe.jpg">
+                  <div class="content">
+                    <div class="header">Joe Henderson</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/elliot.jpg">
+                  <div class="content">
+                    <div class="header">Justen Kitsune</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/joe.jpg">
+                  <div class="content">
+                    <div class="header">Joe Henderson</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/stevie.jpg">
+                  <div class="content">
+                    <div class="header">Stevie Works</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/steve.jpg">
+                  <div class="content">
+                    <div class="header">Steve Careers</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui green circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/elliot.jpg">
+                  <div class="content">
+                    <div class="header">Elliot Occupations</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui green circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/matt.jpg">
+                  <div class="content">
+                    <div class="header">Matt Donovan</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/jenny.jpg">
+                  <div class="content">
+                    <div class="header">Jenny Lewis</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <i class="right floated compact ui green circle icon"></i>
+                  <img class="ui avatar image" src="img/avatar/joe.jpg">
+                  <div class="content">
+                    <div class="header">Joe Henderson</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="segment">
-            <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
+            <div class="ui segment" id="chatSegment" style="display:none;">
+              <i class="floated right close icon link icon"></i>
+              <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
             </div>
-          </div>
+          </div>  
         </div>
-      </div>
+        <!-- </div> -->
       </div>
       <!-- chat column end -->
     </div>
@@ -556,6 +572,10 @@
       transition: 'fade down'
     }
     );
+
+    $('#chat').on("click", function(){
+      $('#chatSegment').show();
+    });
 
     $('#searchIconSpan').onclick = function()
     {
