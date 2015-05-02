@@ -118,8 +118,8 @@
               <div class="ui grid">
                 <div class="twelve wide row">
                   <div class="four wide column">
-                    <a class="ui link">
-                      <i class="large thumbs outline up icon link icon likeButton"></i>Like
+                    <a class="ui link likeButton">
+                      <i class="large thumbs outline up icon link icon"></i>Like
                     </a>
                   </div>
                   <div class="eight wide column">
@@ -349,7 +349,7 @@
               <a class="ui medium header" href="userProfile.html">Elliot Occupations</a>
               <div class="content">
                 <div class="ui tiny labeled icon button follow">
-                  <i class="remove user icon"></i>
+                  <i class="add user icon"></i>
                   Follow
                 </div>
               </div>
@@ -429,18 +429,31 @@
         </div>
       </div>
     </div>
-      <!-- chat column end -->
+    <!-- chat column end -->
 
-    </div>
   </div>
   <script>
-    $('.ui.rating').rating('disable');
+    $('.ui.rating').rating('disable'); // in case of adding the ability to rate movies anywhere outside filmProfile.html, this line should be removed
     $('.film.popup').popup({});
     $('#notificationsItem').popup({
       on: 'click',
       inline: true,
       transition: 'fade down'
     });
+
+    $('#searchIconSpan').onclick = function()
+    {
+      $('#searchForm').submit();
+      console.log("form submitted");
+    }
+
+    $('.likeButton').onclick = function()
+    {
+      console.log("clicke?!");
+      console.log(this);
+      console.log($(this));
+      return false;
+    }
 
     var content = [
     {
@@ -476,6 +489,7 @@
       description: 'User'
     }
     ];
+
     $('.ui.search').search(
     {
       source: content,
@@ -484,13 +498,6 @@
     }
     );
 
-    $('#searchIconSpan').onclick = function()
-    {
-      // $('#searchForm').submit();
-      console.log("form submitted");
-    }
-
-    $('#searchIconSpan').click();  
   </script>
 </body>
 </html>

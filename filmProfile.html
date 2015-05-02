@@ -58,15 +58,12 @@
       <div class="three wide column"> 
         <div class="ui card">
           <div class="row"></div>
-            <div class="ui divided items" style="margin-left:15%;">
-              <div class="item">
-              
-                <i class="left floated big film icon"></i>
-              
-                <a class="ui medium header" href="filmProfile.html" style="margin-left:5%;">Interstellar</a>
-                
-              </div>
+          <div class="ui divided items" style="margin-left:15%;">
+            <div class="item">
+              <i class="left floated big film icon"></i>
+              <a class="ui medium header" href="filmProfile.html" style="margin-left:5%;">Interstellar</a>
             </div>
+          </div>
           
           <!-- <div class="item">
               
@@ -76,7 +73,7 @@
               <div class="content">
                 <div class="ui medium header">Interstellar</div>
               </div>
-          </div> -->
+            </div> -->
 
           <!-- <div class="ui centered medium header">
             <i class="floated left film icon" style="padding-left:3%;"></i> 
@@ -94,7 +91,7 @@
             </div> -->
           </div>
           <div class="extra content">
-            <table class="ui very basic small table">
+            <table class="ui very basic small compact table">
               <tbody>
                 <tr>
                   <td>Director</td>
@@ -116,54 +113,23 @@
                   <td>Language</td>
                   <td>English</td>
                 </tr>
+                <tr>
+                  <td>Average rating</td>
+                  <td>8.7/10</td>
+                </tr>
               </tbody>
             </table>
-          </div>
-          <div class="extra content">
-            <!-- <h2 class="ui header">
-              <img src="/images/icons/plugin.png" style="width:50px;">
-              <div class="content">
-                Plug-ins
-                <div class="sub header">Check out our plug-in marketplace</div>
-              </div>
-            </h2>
- -->
-            <div class="item">
-              
-              <img class="ui tiny left floated image" src="img/imdb_128x128_32.png" style="width:50px;">
-              <h4 class="ui header" style="margin-top:0px;">
-                Average rate: 8.7/10
-                <div class="sub header">
-                  <a href="http://www.imdb.com/title/tt0816692/" target="_blank">
-                    <strong>Interstellar on IMDb!</strong>
-                  </a>
-                </div>
-              </h4>
-              <!-- <div class="ui small header">Average rate: 7.8/10</div> -->
-              <!-- class="ui tiny labeled icon button follow" -->
-              <!-- <div class="ui tiny header">
-                  <a href="#">
-                    View Interstellar on IMDb!
-                 </a>
-              </div> -->
-            </div>
-            <!-- <div class="ui image" style="width:50px;" >
-              <img src="img/imdb_128x128_32.png">
-            </div>
-            <div>
-              Average rate: 7.8/10
-              <br>
-              <a href="#">
-                View Interstellar in IMDb!
-              </a>
-            </div> -->
             
+            <!-- <i class="linkify icon"></i> -->
+            <a href="http://www.imdb.com/title/tt0816692/" target="_blank">
+              <img class="ui centered image" src="img/imdb.png" style="width: 80px;">
+            </a>
           </div>
         </div>
         <a class="ui link" href="opinionList.html">
           <div class="ui labeled icon button">
             <i class="comments icon"></i>
-            View Opinions about Interstellar
+            Users' Opinions
           </div>
         </a>
       </div>
@@ -192,7 +158,7 @@
                 Interstellar premiered on October 26, 2014, in Los Angeles. In North America, it was released in film stock, expanding to venues using digital projectors. The film was successful at the box office with a worldwide gross of over $670 million, and received positive reviews from critics, who gave particular praise to the film's scientific accuracy, science fiction themes, musical score, visual effects and performances from Matthew McConaughey, Anne Hathaway, Jessica Chastain, and Mackenzie Foy. At the 87th Academy Awards, the film won the Best Visual Effects award and received four other nominations — Best Original Score, Best Sound Mixing, Best Sound Editing and Best Production Design, as well as several other awards and nominations particularly for its visual effects, cinematography, musical score, and the performance of Mackenzie Foy.
               </p>
             </div>
-            
+
           </div>
 
           <div class="ui segment">
@@ -201,7 +167,7 @@
               <div class="ui small header">
                 Cast:
               </div>
-              
+
             </div>
             <div class="ui vertical segment">
               <div class="ui bulleted list">
@@ -214,7 +180,7 @@
                 <div class="item">Casey Affleck as Tom Cooper, Murphy's brother</div>
               </div>
             </div>
-            
+
           </div>
 
           <div class="ui segment">
@@ -223,7 +189,7 @@
               <div class="ui small header">
                 Crew:
               </div>
-              
+
             </div>
             <div class="ui vertical segment">
               <div class="ui bulleted list">
@@ -236,7 +202,7 @@
                 <div class="item">Kip Thorne – consultant, executive producer</div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -443,26 +409,26 @@
   <!-- transition scrolling visible active -->
   <!-- class="ui fullscreen modal transition scrolling visible" id="commentWindowModel" style="top: 835px;" -->
   <!-- right aligned  -->
-    <div class="ui modal" id="commentWindowModel">
-      <!-- <i class="close icon"></i> -->
-      <div class="header">If You'd Like, Share Your Opinion!</div>
-      <div class="content">
-        <div class="ui small image">
-          <img src="img/interstellar1.jpg">
+  <div class="ui modal" id="commentWindowModel">
+    <!-- <i class="close icon"></i> -->
+    <div class="header">If You'd Like, Share Your Opinion!</div>
+    <div class="content">
+      <div class="ui small image">
+        <img src="img/interstellar1.jpg">
+      </div>
+      <div class="description" style="width:20%;">
+        <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
+        <div class="extra">
+          Your Rate: <span class="text" id="rating"></span>/10
         </div>
-        <div class="description" style="width:20%;">
-          <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
-          <div class="extra">
-            Your Rate: <span class="text" id="rating"></span>/10
-          </div>
-        </div>
+      </div>
 
-        <div class="ui form">
-          <h4 class="ui dividing header">Please Write Your Opinion </h4>
-          <div class="field">
-            <!-- <label>Feedback</label> -->
-            <textarea></textarea>
-          </div>
+      <div class="ui form">
+        <h4 class="ui dividing header">Please Write Your Opinion </h4>
+        <div class="field">
+          <!-- <label>Feedback</label> -->
+          <textarea></textarea>
+        </div>
           <!-- <div class="field">
             <div class="ui checkbox checked">
               <input type="checkbox" checked="checked" name="contact-me">
@@ -473,7 +439,7 @@
       </div>
 
 
-        <!-- <img class="ui tiny left floated image" src="img/interstellar1.jpg" alt="Interstellar"> -->
+      <!-- <img class="ui tiny left floated image" src="img/interstellar1.jpg" alt="Interstellar"> -->
         <!-- <div class="item">
           <div class="content">
             <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
@@ -483,33 +449,33 @@
             </div>
           </div>
         </div> -->
-      
-      
-      <!-- <div class="content"> -->
+
+
+        <!-- <div class="content"> -->
         <!-- <div class="ui horizontal divider"></div> -->
         <!-- <div class="ui form"> -->
-          <!-- <h4 class="ui dividing header">Please Write Your Opinion </h4> -->
-          <!-- <div class="field"> -->
-            <!-- <label>Feedback</label> -->
-            <!-- <textarea></textarea> -->
-          <!-- </div> -->
+        <!-- <h4 class="ui dividing header">Please Write Your Opinion </h4> -->
+        <!-- <div class="field"> -->
+        <!-- <label>Feedback</label> -->
+        <!-- <textarea></textarea> -->
+        <!-- </div> -->
           <!-- <div class="field">
             <div class="ui checkbox checked">
               <input type="checkbox" checked="checked" name="contact-me">
               <label>It's OK.</label>
             </div>
           </div> -->
+          <!-- </div> -->
+          <!-- </div> -->
+          <div class="actions">
+            <div class="ui button">Cancel</div>
+            <div class="ui green button">Confirm</div>
+          </div>
+        </div>
         <!-- </div> -->
-      <!-- </div> -->
-      <div class="actions">
-        <div class="ui button">Cancel</div>
-        <div class="ui green button">Confirm</div>
-      </div>
-    </div>
-  <!-- </div> -->
-  <!-- Forgot password modal end -->
+        <!-- Forgot password modal end -->
 
-  <script>
+        <script>
     // $('.ui.rating').rating('enable');
     $('.ui .rating').rating('setting', 'clearable', true);
 
