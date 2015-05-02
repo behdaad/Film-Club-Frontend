@@ -66,14 +66,16 @@
 
     <div class="right menu">
       <div class="item">
-        <a href="timeline.html"><img class="ui image" src="img/LOGO.png" height="20"></a>
+        <a href="timeline.html"><img class="ui image" src="img/LOGO.png" height="18"></a>
       </div>
       <div class="item">
         <div class="ui search">
           <form action="search.html" method="get" id="searchForm">
             <div class="ui transparent icon input">
               <input class="prompt" type="text" placeholder="Search..." name="query">
-              <span id="searchIconSpan"><i class="search link icon" id="searchIcon"></i></span>
+              <span id="searchIconSpan">
+                <i class="search link icon" id="searchIcon"></i>
+              </span>
             </div>
           </form>
           <div class="results" style="left: -11px;" id="searchResults" style="z-index: 999;"></div>
@@ -141,14 +143,14 @@
             <div class="ui vertical segment">
               <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
               <div class="ui small header">
-                You/John rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Christopher Nolan Average Rate on IMDb: 8.7/10" data-variation="huge">Interstellar</span></a> 8/10.
+                You/John rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Christopher Nolan Average Rate: 8.7/10" data-variation="huge">Interstellar</span></a> 8/10.
               </div>
               <div class="ui rating" data-rating="8" data-max-rating="10"></div>
               <br />
               <a href="singlePost.html"><div class="date">2 hours ago</div></a>
             </div>
             <div class="ui vertical segment">
-              <img class="ui small left floated top aligned image" src="img/interstellar2.jpg" />
+              <img class="ui small left floated top aligned image" src="img/posters/interstellar2.jpg" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
@@ -156,29 +158,94 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
+            <!-- like segment -->
             <div class="ui vertical segment">
-              <i class="large thumbs outline up icon link icon"></i>
-              Jane Doe and 34 others like this.
-            </div>
-            <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <a>
-                View 5 comments.
-              </a>
-            </div>
-            <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <div class="ui input">
-                <input type="text" placeholder="Type your comment here." />
+              <div class="ui grid">
+                <div class="row">
+                  <div class="eight wide column" style="padding-left: 15px; width: 120px !important;">
+                    <div class="ui basic labeled left icon blue button likeButton" id="likeButton1">
+                      <i class="thumbs outline up icon"></i>
+                      Like
+                    </div>
+                  </div>
+                  <div class="eight wide column">
+                    <div class="ui mini horizontal statistic" style="margin-top: 5px;">
+                      <div class="value likeCount" id="likeCount1">34</div>
+                      <div class="label">people like this.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- like segment end -->
+
+            <!-- comments segment -->
+            <div class="ui vertical segment">
+              <form class="ui reply form commentForm">
+                <div class="field">
+                  <div class="ui action input">
+                    <input type="text" placeholder="Type your comment..." id="commentText1">
+                    <button class="ui small blue right labeled icon button commentButton" id="commentButton1">
+                      <i class="comment outline icon"></i>
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h4 class="ui dividing header"><span id="commentsCount1">3</span> Comments</h4>
+              <div class="ui comments" id="comments1">
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/matt.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author" href="userProfile.html">Matt Telbas</a>
+                    <div class="metadata">
+                      <span class="date">Today at 5:42PM</span>
+                    </div>
+                    <div class="text">
+                      How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/jenny.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Jenny Hess</a>
+                    <div class="metadata">
+                      <span class="date">Yesterday at 12:30AM</span>
+                    </div>
+                    <div class="text">
+                      <p>This has been very useful for my "research". Thanks as well!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/joe.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- comments segment end -->
           </div>
 
           <div class="ui segment">
             <div class="ui vertical segment">
               <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
               <div class="ui small header">
-                You/John rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Robert Zemeckis Average Rate on IMDb: 8.8/10" data-variation="huge">Forrest Gump</a> 10/10.
+                You/John rated <a href="filmProfile.html"><span class="film popup" data-content="Director: Robert Zemeckis Average Rate: 8.8/10" data-variation="huge">Forrest Gump</span></a> 10/10.
               </div>
               <div class="ui rating" data-rating="10" data-max-rating="10"></div>
               <a href="singlePost.html"><div class="date">3 weeks ago</div></a>
@@ -192,16 +259,73 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
+            <!-- like segment -->
             <div class="ui vertical segment">
-              <i class="large thumbs outline up icon link icon"></i>
-              40 people like this.
-            </div>
-            <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <div class="ui input">
-                <input type="text" placeholder="Type your comment here." />
+              <div class="ui grid">
+                <div class="row">
+                  <div class="eight wide column" style="padding-left: 15px; width: 120px !important;">
+                    <div class="ui basic labeled left icon blue button likeButton" id="likeButton2">
+                      <i class="thumbs outline up icon"></i>
+                      Like
+                    </div>
+                  </div>
+                  <div class="eight wide column">
+                    <div class="ui mini horizontal statistic" style="margin-top: 5px;">
+                      <div class="value likeCount" id="likeCount2">2</div>
+                      <div class="label">people like this.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- like segment end -->
+
+            <!-- comments segment -->
+            <div class="ui vertical segment">
+              <form class="ui reply form commentForm">
+                <div class="field">
+                  <div class="ui action input">
+                    <input type="text" placeholder="Type your comment..." id="commentText2">
+                    <button class="ui small blue right labeled icon button commentButton" id="commentButton2">
+                      <i class="comment outline icon"></i>
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h4 class="ui dividing header"><span id="commentsCount2">2</span> Comments</h4>
+              <div class="ui comments" id="comments2">
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/matt.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author" href="userProfile.html">Matt Telbas</a>
+                    <div class="metadata">
+                      <span class="date">Today at 5:42PM</span>
+                    </div>
+                    <div class="text">
+                      How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/joe.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- comments segment end -->
           </div>
         </div>
       </div>
@@ -216,7 +340,7 @@
           <div class="ui divided items">
             <div class="item">
               <a class="ui inline link" href="filmProfile.html">
-                <img class="ui tiny left floated rounded bordered image" src="img/interstellar2.jpg" alt="Interstellar" style="margin-bottom:6%;">
+                <img class="ui tiny left floated rounded bordered image" src="img/posters/interstellar2.jpg" alt="Interstellar" style="margin-bottom:6%;">
               </a>
               <div class="content">
                 <a class="ui medium header" href="filmProfile.html">Interstellar</a>
@@ -233,7 +357,7 @@
             </div>
             <div class="item">
               <a class="ui link" href="filmProfile.html">
-                <img class="ui tiny left floated rounded bordered image" src="img/WHIPLASH+onesheet.jpg" alt="Whiplash">
+                <img class="ui tiny left floated rounded bordered image" src="img/posters/WHIPLASH+onesheet.jpg" alt="Whiplash">
               </a>
               <div class="content">
                 <a class="ui medium header" href="filmProfile.html">Whiplash</a>
@@ -250,7 +374,7 @@
             </div>
             <div class="item">
               <a class="ui link" href="filmProfile.html">
-                <img class="ui tiny left floated rounded bordered image" src="img/camp_xray_xlg.jpg" alt="Camp X-Ray">
+                <img class="ui tiny left floated rounded bordered image" src="img/posters/camp_xray_xlg.jpg" alt="Camp X-Ray">
               </a>
               <div class="content">
                 <a class="ui medium header" href="filmProfile.html">Camp X-Ray</a>
@@ -592,16 +716,16 @@
         );
 
         $('#chatSegment').append(
-        '<form class="ui reply form commentForm">\
-            <div class="field">\
-              <div class="ui action input">\
-                <input type="text">\
-                <button class="ui small blue icon button commentButton" id="commentButton3">\
-                  <i class="comment outline icon"></i>\
-                </button>\
-              </div>\
+          '<form class="ui reply form commentForm">\
+          <div class="field">\
+            <div class="ui action input">\
+              <input type="text">\
+              <button class="ui small blue icon button commentButton" id="commentButton3">\
+                <i class="comment outline icon"></i>\
+              </button>\
             </div>\
-          </form>'
+          </div>\
+        </form>'
         );
       }
     });
@@ -611,6 +735,115 @@
       chatOpen = false;
       $('#chatHeader').text("");
     });
+
+    var liked1 = false;
+
+    $('#likeButton1').click(
+      function()
+      {
+        var count1 = parseInt($('#likeCount1').text());
+        if (!liked1)
+        {
+          $('#likeCount1').text(String(count1 + 1));
+          liked1 = true;
+          $('#likeButton1').html(
+            '<i class="thumbs outline down icon"></i>Unlike'
+            );
+        }
+        else
+        {
+          $('#likeCount1').text(String(count1 - 1));
+          liked1 = false;
+          $('#likeButton1').html(
+            '<i class="thumbs outline up icon"></i>Like'
+            );
+        }
+      }
+      );
+
+    $('#commentButton1').click(
+      function()
+      {
+      var text = $('#commentText1').val(); // comment text
+      if (text !== "")
+      {
+        $('#comments1').prepend(
+
+          '<div class="comment"> \
+          <a class="avatar"> \
+            <img src="img/avatar/steve.jpg"> \
+          </a> \
+          <div class="content"> \
+            <a class="author" href="userProfile.html">Steve Jobs</a> \
+            <div class="metadata"> \
+              <span class="date">Just Now</span> \
+            </div> \
+            <div class="text">'
+              + text + 
+              '</div> \
+            </div> \
+          </div>');
+        $('#commentText1').val("");
+        var cmntCnt1 = parseInt($('#commentsCount1').text()) + 1;
+        $('#commentsCount1').text(String(cmntCnt1));
+      }
+      return false;
+    }
+    );
+
+    var liked2 = false;
+    $('#likeButton2').click(
+      function()
+      {
+        var count2 = parseInt($('#likeCount2').text());
+        if (!liked2)
+        {
+          $('#likeCount2').text(String(count2 + 1));
+          liked2 = true;
+          $('#likeButton2').html(
+            '<i class="thumbs outline down icon"></i>Unlike'
+            );
+        }
+        else
+        {
+          $('#likeCount2').text(String(count2 - 1));
+          liked2 = false;
+          $('#likeButton2').html(
+            '<i class="thumbs outline up icon"></i>Like'
+            );
+        }
+      }
+      );
+
+    $('#commentButton2').click(
+      function()
+      {
+      var text = $('#commentText2').val(); // comment text
+      if (text !== "")
+      {
+        $('#comments2').prepend(
+
+          '<div class="comment"> \
+          <a class="avatar"> \
+            <img src="img/avatar/steve.jpg"> \
+          </a> \
+          <div class="content"> \
+            <a class="author" href="userProfile.html">Steve Jobs</a> \
+            <div class="metadata"> \
+              <span class="date">Just Now</span> \
+            </div> \
+            <div class="text">'
+              + text + 
+              '</div> \
+            </div> \
+          </div>');
+        $('#commentText2').val("");
+        var cmntCnt2 = parseInt($('#commentsCount2').text()) + 1;
+        $('#commentsCount2').text(String(cmntCnt2));
+      }
+      return false;
+    }
+    );
   </script>
 </body>
 </html>
