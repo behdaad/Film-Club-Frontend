@@ -1038,6 +1038,48 @@
       transition: 'fade down'
     }
     );
+
+    var hell;
+    var chatOpen = false;
+    $('.chat').on("click", function(){
+      if (!chatOpen)
+      {
+        $('#chatSegment').show();
+        hell = $(this);
+        var name = $(this).children()[2].children[0].textContent;
+        $('#chatHeader').append(name);
+        chatOpen = true;
+        $('#chatSegment').append(
+          '<div class="ui message">\
+          Hello! You there?\
+        </div>'
+        );
+        $('#chatSegment').append(
+          '<div class="ui blue message">\
+          Well yes! How are you man?\
+        </div>'
+        );
+
+        $('#chatSegment').append(
+          '<form class="ui reply form commentForm">\
+          <div class="field">\
+            <div class="ui action input">\
+              <input type="text">\
+              <button class="ui small blue icon button commentButton" id="commentButton3">\
+                <i class="comment outline icon"></i>\
+              </button>\
+            </div>\
+          </div>\
+        </form>'
+        );
+      }
+    });
+
+    $('#closeChat').on("click", function(){
+      $('#chatSegment').hide();
+      chatOpen = false;
+      $('#chatHeader').text("");
+    });
  
   </script>
 </body>
