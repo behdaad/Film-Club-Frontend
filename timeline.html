@@ -156,7 +156,7 @@
                   </div>
                 </div>
               </form>
-              <h4 class="ui dividing header">Comments</h4>
+              <h4 class="ui dividing header"><span id="commentsCount1">3</span> Comments</h4>
               <div class="ui comments" id="comments1">
                 <div class="comment">
                   <a href="userProfile.html" class="avatar">
@@ -261,7 +261,7 @@
                   </div>
                 </div>
               </form>
-              <h4 class="ui dividing header">Comments</h4>
+              <h4 class="ui dividing header"><span id="commentsCount2">2</span> Comments</h4>
               <div class="ui comments" id="comments2">
                 <div class="comment">
                   <a href="userProfile.html" class="avatar">
@@ -274,20 +274,6 @@
                     </div>
                     <div class="text">
                       How artistic!
-                    </div>
-                  </div>
-                </div>
-                <div class="comment">
-                  <a href="userProfile.html" class="avatar">
-                    <img src="img/avatar/jenny.jpg">
-                  </a>
-                  <div class="content">
-                    <a class="author"  href="userProfile.html">Jenny Hess</a>
-                    <div class="metadata">
-                      <span class="date">Yesterday at 12:30AM</span>
-                    </div>
-                    <div class="text">
-                      <p>This has been very useful for my "research". Thanks as well!</p>
                     </div>
                   </div>
                 </div>
@@ -365,7 +351,7 @@
                   </div>
                 </div>
               </form>
-              <h4 class="ui dividing header">Comments</h4>
+              <h4 class="ui dividing header"><span id="commentsCount3">4</span> Comments</h4>
               <div class="ui comments" id="comments3">
                 <div class="comment">
                   <a href="userProfile.html" class="avatar">
@@ -378,6 +364,20 @@
                     </div>
                     <div class="text">
                       How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/jenny.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Jenny Hess</a>
+                    <div class="metadata">
+                      <span class="date">Yesterday at 12:31AM</span>
+                    </div>
+                    <div class="text">
+                      <p>Pardon?</p>
                     </div>
                   </div>
                 </div>
@@ -597,7 +597,7 @@
     </div>
   </div>
   <!-- page grid end -->
-<script>
+  <script>
   $('.ui.rating').rating('disable'); // in case of adding the ability to rate movies anywhere outside filmProfile.html, this line should be removed
   $('.film.popup').popup({});
   $('#notificationsItem').popup({
@@ -611,7 +611,7 @@
     {
       $('#searchForm').submit();
     }
-  );
+    );
 
   var liked1 = false;
 
@@ -625,7 +625,7 @@
         liked1 = true;
         $('#likeButton1').html(
           '<i class="thumbs outline down icon"></i>Unlike'
-        );
+          );
       }
       else
       {
@@ -633,10 +633,10 @@
         liked1 = false;
         $('#likeButton1').html(
           '<i class="thumbs outline up icon"></i>Like'
-        );
+          );
       }
     }
-  );
+    );
 
   $('#commentButton1').click(
     function()
@@ -646,7 +646,7 @@
       {
         $('#comments1').prepend(
 
-        '<div class="comment"> \
+          '<div class="comment"> \
           <a class="avatar"> \
             <img src="img/avatar/steve.jpg"> \
           </a> \
@@ -657,14 +657,16 @@
             </div> \
             <div class="text">'
               + text + 
-            '</div> \
-          </div> \
-        </div>');
+              '</div> \
+            </div> \
+          </div>');
         $('#commentText1').val("");
+        var cmntCnt1 = parseInt($('#commentsCount1').text()) + 1;
+        $('#commentsCount1').text(String(cmntCnt1));
       }
       return false;
     }
-  );
+    );
 
   var liked2 = false;
   $('#likeButton2').click(
@@ -677,7 +679,7 @@
         liked2 = true;
         $('#likeButton2').html(
           '<i class="thumbs outline down icon"></i>Unlike'
-        );
+          );
       }
       else
       {
@@ -685,10 +687,10 @@
         liked2 = false;
         $('#likeButton2').html(
           '<i class="thumbs outline up icon"></i>Like'
-        );
+          );
       }
     }
-  );
+    );
 
   $('#commentButton2').click(
     function()
@@ -698,7 +700,7 @@
       {
         $('#comments2').prepend(
 
-        '<div class="comment"> \
+          '<div class="comment"> \
           <a class="avatar"> \
             <img src="img/avatar/steve.jpg"> \
           </a> \
@@ -709,14 +711,16 @@
             </div> \
             <div class="text">'
               + text + 
-            '</div> \
-          </div> \
-        </div>');
+              '</div> \
+            </div> \
+          </div>');
         $('#commentText2').val("");
+        var cmntCnt2 = parseInt($('#commentsCount2').text()) + 1;
+        $('#commentsCount2').text(String(cmntCnt2));
       }
       return false;
     }
-  );
+    );
 
   var liked3 = false;
   $('#likeButton3').click(
@@ -729,7 +733,7 @@
         liked3 = true;
         $('#likeButton3').html(
           '<i class="thumbs outline down icon"></i>Unlike'
-        );
+          );
       }
       else
       {
@@ -737,10 +741,10 @@
         liked3 = false;
         $('#likeButton3').html(
           '<i class="thumbs outline up icon"></i>Like'
-        );
+          );
       }
     }
-  );
+    );
 
   $('#commentButton3').click(
     function()
@@ -750,7 +754,7 @@
       {
         $('#comments3').prepend(
 
-        '<div class="comment"> \
+          '<div class="comment"> \
           <a class="avatar"> \
             <img src="img/avatar/steve.jpg"> \
           </a> \
@@ -761,14 +765,16 @@
             </div> \
             <div class="text">'
               + text + 
-            '</div> \
-          </div> \
-        </div>');
+              '</div> \
+            </div> \
+          </div>');
         $('#commentText3').val("");
+        var cmntCnt3 = parseInt($('#commentsCount3').text()) + 1;
+        $('#commentsCount3').text(String(cmntCnt3));
       }
       return false;
     }
-  );
+    );
 
 
   var content = [
