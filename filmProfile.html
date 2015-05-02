@@ -15,11 +15,12 @@
 
   <script src="js/jquery-2.1.3.min.js"></script>
   <script src="dist/semantic.js"></script>
+  <script src="js/ourJS.js"></script>
 </head>
 <body>
   <!-- header start -->
-  <div class="ui main menu fixed">
-    <a class="item" href="timeline.html">
+  <div class="ui fixed menu">
+    <a class="active item" href="timeline.html">
       <i class="home icon"></i> Timeline
     </a>
     <a class="item" href="userProfile.html">
@@ -28,16 +29,57 @@
     <a class="item">
       <i class="setting icon"></i> Settings
     </a>
-    <a class="item">
-      <i class="announcement sign icon"></i> Notifications
+    <a class="item" id="notificationsItem">
+      <i class="announcement sign icon"></i>Notifications
     </a>
+    <div class="ui very wide popup" id="notificationsPopup">
+      <div class="ui divided list">
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/elliot.jpg">
+          <div class="content">
+            <a class="header">Elliot Hemmingway</a>
+            <div class="description">Liked your post.</div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/stevie.jpg">
+          <div class="content">
+            <a class="header">Stevie Penguin</a>
+            <div class="description">Commented on your post.</div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/steve.jpg">
+          <div class="content">
+            <a class="header">Steve Cook</a>
+            <div class="description">Started to follow you.</div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="ui avatar image" src="img/avatar/jenny.jpg">
+          <div class="content">
+            <a class="header">Jenny Hess</a>
+            <div class="description">Commented on a post you've commented on.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="right menu">
       <div class="item">
+        <a href="timeline.html"><img class="ui image" src="img/LOGO.png" height="18"></a>
+      </div>
+      <div class="item">
         <div class="ui search">
-          <div class="ui transparent icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search link icon"></i>
-          </div>
+          <form action="search.html" method="get" id="searchForm">
+            <div class="ui transparent icon input">
+              <input class="prompt" type="text" placeholder="Search..." name="query">
+              <span id="searchIconSpan">
+                <i class="search link icon" id="searchIcon"></i>
+              </span>
+            </div>
+          </form>
+          <div class="results" style="left: -11px;" id="searchResults" style="z-index: 999;"></div>
         </div>
       </div>
       <a class="item" href="login.html">
@@ -49,12 +91,9 @@
 
   <!-- page grid -->
   <div class="ui page divided grid" style="padding-right: 10px; padding-left: 10px;">
-    <!-- <div class="ui right attached rail">
-      <div class="segment"></div>
-    </div> -->
     <div class="row"></div>
     <div class="row">
-      <!-- <div class="one wide column"></div> -->
+      <!-- card column -->
       <div class="three wide column"> 
         <div class="ui card">
           <div class="row"></div>
@@ -63,32 +102,12 @@
               <i class="left floated big film icon"></i>
               <a class="ui medium header" href="filmProfile.html" style="margin-left:5%;">Interstellar</a>
             </div>
-          </div>
-          
-          <!-- <div class="item">
-              
-                <i class="big left floated film icon" src="img/wireframe/image.png">
-                </i>
-              
-              <div class="content">
-                <div class="ui medium header">Interstellar</div>
-              </div>
-            </div> -->
-
-          <!-- <div class="ui centered medium header">
-            <i class="floated left film icon" style="padding-left:3%;"></i> 
-            Interstellar
-            
-          </div> -->
-          
+          </div>          
           <div class="ui medium image">
-            <img src="img/interstellar1.jpg">
+            <img src="img/interstellar1.jpg" alt="Interstellar">
           </div>
           <div class="content">
             <h3 class="center aligned header">A movie about science and some unrelated non-sense.</h3>
-            <!-- <div class="meta">
-              <span class="date">Username: john91</span>
-            </div> -->
           </div>
           <div class="extra content">
             <table class="ui very basic small compact table" style="margin-bottom: 2px;">
@@ -117,23 +136,16 @@
                   <td>Average rating</td>
                   <td>8.7/10</td>
                 </tr>
-                <!-- <tr>
-                  <td><i class="linkify icon"></i></td>
-                  <td>
-                    <a href="http://www.imdb.com/title/tt0816692/" target="_blank">
-                    <img class="ui right floated image" src="img/imdb.png" style="width: 80px; margin-right: 14px;">
-                    </a>
-                  </td>
-                </tr> -->
               </tbody>
             </table>
             
             <i class="linkify icon"></i>
             <a href="http://www.imdb.com/title/tt0816692/" target="_blank">
-              <img class="ui right floated image" src="img/imdb.png" style="width: 80px; margin-right: 30px;">
+              <img class="ui right floated image" alt="IMDb" src="img/imdb.png" style="width: 80px; margin-right: 30px;">
             </a>
           </div>
         </div>
+
         <a class="ui link" href="opinionList.html">
           <div class="ui labeled icon button">
             <i class="comments icon"></i>
@@ -141,7 +153,9 @@
           </div>
         </a>
       </div>
+      <!-- card column end -->
 
+      <!-- main column -->
       <div class="six wide column">
         <div class="ui segment">
           <div class="ui segment">
@@ -149,11 +163,9 @@
               Rate this movie:
             </div>
             <div class="ui huge rating" data-max-rating="10" id="commentWindow"></div>
-            <!-- <a href="#" id="commentWindow"><div class="ui large rating" data-max-rating="10"></div></a> -->
           </div>
           <div class="ui segment">
             <div class="ui vertical segment">
-              <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
               <div class="ui small header">
                 Description:
               </div>
@@ -166,16 +178,13 @@
                 Interstellar premiered on October 26, 2014, in Los Angeles. In North America, it was released in film stock, expanding to venues using digital projectors. The film was successful at the box office with a worldwide gross of over $670 million, and received positive reviews from critics, who gave particular praise to the film's scientific accuracy, science fiction themes, musical score, visual effects and performances from Matthew McConaughey, Anne Hathaway, Jessica Chastain, and Mackenzie Foy. At the 87th Academy Awards, the film won the Best Visual Effects award and received four other nominations — Best Original Score, Best Sound Mixing, Best Sound Editing and Best Production Design, as well as several other awards and nominations particularly for its visual effects, cinematography, musical score, and the performance of Mackenzie Foy.
               </p>
             </div>
-
           </div>
 
           <div class="ui segment">
             <div class="ui vertical segment">
-              <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
               <div class="ui small header">
                 Cast:
               </div>
-
             </div>
             <div class="ui vertical segment">
               <div class="ui bulleted list">
@@ -188,12 +197,10 @@
                 <div class="item">Casey Affleck as Tom Cooper, Murphy's brother</div>
               </div>
             </div>
-
           </div>
 
           <div class="ui segment">
             <div class="ui vertical segment">
-              <!-- <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" /> -->
               <div class="ui small header">
                 Crew:
               </div>
@@ -214,7 +221,8 @@
           </div>
         </div>
       </div>
-      <!-- <div class="ui vertical divider"></div> -->
+      <!-- main column end -->
+
       <!-- suggestions column -->
       <div class="four wide computer five wide tablet only column">
 
@@ -224,10 +232,10 @@
           <div class="ui divided items">
             <div class="item">
               <a class="ui inline link" href="filmProfile.html">
-                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Interstellar">
+                <img class="ui tiny left floated rounded bordered image" src="img/posters/interstellar2.jpg" alt="Interstellar" style="margin-bottom:6%;">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
+                <a class="ui medium header" href="filmProfile.html">Interstellar</a>
                 <div class="meta">
                   <span class="genre">Sci-Fi</span>
                 </div>
@@ -241,10 +249,10 @@
             </div>
             <div class="item">
               <a class="ui link" href="filmProfile.html">
-                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Whiplash">
+                <img class="ui tiny left floated rounded bordered image" src="img/posters/WHIPLASH+onesheet.jpg" alt="Whiplash">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Whiplash</a></div>
+                <a class="ui medium header" href="filmProfile.html">Whiplash</a>
                 <div class="meta">
                   <span class="genre">Drama</span>
                 </div>
@@ -258,10 +266,10 @@
             </div>
             <div class="item">
               <a class="ui link" href="filmProfile.html">
-                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Camp X-Ray">
+                <img class="ui tiny left floated rounded bordered image" src="img/posters/camp_xray_xlg.jpg" alt="Camp X-Ray">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Camp X-Ray</a></div>
+                <a class="ui medium header" href="filmProfile.html">Camp X-Ray</a>
                 <div class="meta">
                   <span class="genre">War, Drama</span>
                 </div>
@@ -280,12 +288,12 @@
         <!-- suggested users -->
         <div class="ui segment">
           <div class="ui header">Users to Follow</div>
-          <div class="ui divided items">
+          <div class="ui divided list">
             <div class="item">
               <a href="userProfile.html">
                 <img class="ui tiny avatar left floated image" src="img/avatar/stevie.jpg">
               </a>
-              <div class="ui medium header"><a href="userProfile.html">Stevie Works</a></div>
+              <a class="ui medium header" href="userProfile.html">Stevie Works</a>
               <div class="content">
                 <div class="ui tiny labeled icon button follow">
                   <i class="add user icon"></i>
@@ -297,7 +305,7 @@
               <a href="userProfile.html">
                 <img class="ui tiny avatar left floated image" src="img/avatar/steve.jpg">
               </a>
-              <div class="ui medium header"><a href="userProfile.html">Steve Careers</a></div>
+              <a class="ui medium header" href="userProfile.html">Steve Careers</a>
               <div class="content">
                 <div class="ui tiny labeled icon button follow">
                   <i class="add user icon"></i>
@@ -309,10 +317,10 @@
               <a href="userProfile.html">
                 <img class="ui tiny avatar left floated image" src="img/avatar/elliot.jpg">
               </a>
-              <div class="ui medium header"><a href="userProfile.html">Elliot Occupations</a></div>
+              <a class="ui medium header" href="userProfile.html">Elliot Occupations</a>
               <div class="content">
                 <div class="ui tiny labeled icon button follow">
-                  <i class="remove user icon"></i>
+                  <i class="add user icon"></i>
                   Follow
                 </div>
               </div>
@@ -327,10 +335,10 @@
           <div class="ui divided items">
             <div class="item">
               <a class="ui link" href="filmProfile.html">
-                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Enter the Matrix">
+                <img class="ui tiny left floated rounded bordered image" src="img/123.jpg" alt="Enter the Matrix">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Enter the Matrix</a></div>
+                <a class="ui medium header" href="filmProfile.html">Enter the Matrix</a>
                 <div class="meta">
                   <span class="genre">Fantasy, Sci-Fi</span>
                 </div>
@@ -344,10 +352,10 @@
             </div>
             <div class="item">
               <a class="ui link" href="filmProfile.html">
-                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Fight Club">
+                <img class="ui tiny left floated rounded bordered image" src="img/456.jpg" alt="Fight Club" style="margin-bottom:7%;">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Fight Club</a></div>
+                <a class="ui medium header" href="filmProfile.html">Fight Club</a>
                 <div class="meta">
                   <span class="genre">Drama</span>
                 </div>
@@ -361,10 +369,10 @@
             </div>
             <div class="item">
               <a class="ui link" href="filmProfile.html">
-                <img class="ui tiny left floated image" src="img/wireframe/image.png" alt="Pursuit of Happyness">
+                <img class="ui tiny left floated rounded bordered image" src="img/The-Pursuit-of-Happyness-Poster.jpg" alt="Pursuit of Happyness">
               </a>
               <div class="content">
-                <div class="ui medium header"><a class="ui link" href="filmProfile.html">Pursuit of Happyness</a></div>
+                <a class="ui medium header" href="filmProfile.html">Pursuit of Happyness</a>
                 <div class="meta">
                   <span class="genre">Drama</span>
                 </div>
@@ -380,9 +388,9 @@
         </div>
         <!-- popular movies end -->
       </div>
-      <!-- <div class="one wide column">
-        <div class="ui segment"></div>
-      </div> -->
+      <!-- suggestions column end -->
+      
+      <!-- chat column -->
       <div class="three wide column" style="position: fixed; right: -1%;">
         <div class="ui segment">
           <p> This is Chat Bar. This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.This is Chat Bar.</p>
@@ -390,35 +398,13 @@
           
         </div>
       </div>
+      <!-- chat column end -->
     </div>
   </div>
+  <!-- page grid end -->
 
-  <!-- Comment Window modal -->
-  <!-- <div class="ui small right aligned modal" id="commentWindowModel">
-    <i class="close icon"></i>
-    <div class="ui form segment" id="forgotForm">
-      <div class="ui negative message">
-        <div class="header">
-          Error
-        </div>
-        Email you provided is not registered.
-      </div>
-      <div class="field">
-        <label>Email</label>
-        <div class="ui left icon input">
-          <input placeholder="Email" type="email" name="email">
-          <i class="mail icon"></i>
-        </div>
-      </div>
-      <div class="ui blue submit button">Resend Password</div>
-    </div>
-  </div> -->
-  <!-- <div class="ui dimmer modals page transition visible active" id="commentWindowModel"> -->
-  <!-- transition scrolling visible active -->
-  <!-- class="ui fullscreen modal transition scrolling visible" id="commentWindowModel" style="top: 835px;" -->
-  <!-- right aligned  -->
+  <!-- Modal -->
   <div class="ui modal" id="commentWindowModel">
-    <!-- <i class="close icon"></i> -->
     <div class="header">If You'd Like, Share Your Opinion!</div>
     <div class="content">
       <div class="ui small image">
@@ -430,66 +416,23 @@
           Your Rate: <span class="text" id="rating"></span>/10
         </div>
       </div>
-
       <div class="ui form">
         <h4 class="ui dividing header">Please Write Your Opinion </h4>
         <div class="field">
-          <!-- <label>Feedback</label> -->
           <textarea></textarea>
         </div>
-          <!-- <div class="field">
-            <div class="ui checkbox checked">
-              <input type="checkbox" checked="checked" name="contact-me">
-              <label>It's OK.</label>
-            </div>
-          </div> -->
-        </div>
       </div>
-
-
-      <!-- <img class="ui tiny left floated image" src="img/interstellar1.jpg" alt="Interstellar"> -->
-        <!-- <div class="item">
-          <div class="content">
-            <div class="ui medium header"><a class="ui link" href="filmProfile.html">Interstellar</a></div>
-      
-            <div class="extra">
-              Your Rate: 8.2/10
-            </div>
-          </div>
-        </div> -->
-
-
-        <!-- <div class="content"> -->
-        <!-- <div class="ui horizontal divider"></div> -->
-        <!-- <div class="ui form"> -->
-        <!-- <h4 class="ui dividing header">Please Write Your Opinion </h4> -->
-        <!-- <div class="field"> -->
-        <!-- <label>Feedback</label> -->
-        <!-- <textarea></textarea> -->
-        <!-- </div> -->
-          <!-- <div class="field">
-            <div class="ui checkbox checked">
-              <input type="checkbox" checked="checked" name="contact-me">
-              <label>It's OK.</label>
-            </div>
-          </div> -->
-          <!-- </div> -->
-          <!-- </div> -->
-          <div class="actions">
-            <div class="ui button">Cancel</div>
-            <div class="ui green button">Confirm</div>
-          </div>
-        </div>
-        <!-- </div> -->
-        <!-- Forgot password modal end -->
-
-        <script>
-    // $('.ui.rating').rating('enable');
+    </div>     
+    <div class="actions">
+      <div class="ui button">Cancel</div>
+      <div class="ui green button">Confirm</div>
+    </div>
+  </div>
+  <!-- Modal end-->
+        
+<script>
     $('.ui .rating').rating('setting', 'clearable', true);
-
     var commentWindowLink = document.getElementById('commentWindow');
-
-    // var rateValue;
     commentWindowLink.onclick = function()
     {
       var rateValue = $('#commentWindow').rating('get rating');
@@ -500,6 +443,6 @@
       }
       return false;
     }
-  </script>
+</script>
 </body>
 </html>
