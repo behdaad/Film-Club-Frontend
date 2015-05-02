@@ -66,14 +66,16 @@
 
     <div class="right menu">
       <div class="item">
-        <a href="timeline.html"><img class="ui image" src="img/LOGO.png" height="20"></a>
+        <a href="timeline.html"><img class="ui image" src="img/LOGO.png" height="18"></a>
       </div>
       <div class="item">
         <div class="ui search">
           <form action="search.html" method="get" id="searchForm">
             <div class="ui transparent icon input">
               <input class="prompt" type="text" placeholder="Search..." name="query">
-              <span id="searchIconSpan"><i class="search link icon" id="searchIcon"></i></span>
+              <span id="searchIconSpan">
+                <i class="search link icon" id="searchIcon"></i>
+              </span>
             </div>
           </form>
           <div class="results" style="left: -11px;" id="searchResults" style="z-index: 999;"></div>
@@ -116,33 +118,36 @@
             </div>
             <div class="ui vertical segment">
               <div class="ui grid">
-                <div class="twelve wide row">
-                  <div class="four wide column">
-                    <a class="ui link likeButton">
-                      <i class="large thumbs outline up icon link icon"></i>Like
-                    </a>
+                <div class="row">
+                  <div class="five wide column">
+                    <div class="ui basic icon blue button likeButton" id="likeButton1">
+                      <i class="thumbs outline up icon"></i>
+                      Like
+                    </div>
                   </div>
                   <div class="eight wide column">
                     <div class="ui mini horizontal statistic">
-                      <div class="value">34</div>
+                      <div class="value likeCount" id="likeCount1">34</div>
                       <div class="label">people like this.</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="ui comments">
-                <form class="ui reply form commentForm">
-                  <div class="field">
-                    <div class="ui action input">
-                      <input type="text" placeholder="Type your comment...">
-                      <button class="ui small blue right labeled icon button commentButton">
-                        <i class="comment outline icon"></i>
-                        Comment
-                      </button>
-                    </div>
+            </div>
+            <div class="ui vertical segment">
+              <form class="ui reply form commentForm">
+                <div class="field">
+                  <div class="ui action input">
+                    <input type="text" placeholder="Type your comment..." id="commentText1">
+                    <button class="ui small blue icon button commentButton" id="commentButton1">
+                      Comment &nbsp;&nbsp;
+                      <i class="comment outline icon"></i>
+                    </button>
                   </div>
-                </form>
-                <h4 class="ui dividing header">Comments</h4>
+                </div>
+              </form>
+              <h4 class="ui dividing header">Comments</h4>
+              <div class="ui comments" id="comments1">
                 <div class="comment">
                   <a class="avatar">
                     <img src="img/avatar/matt.jpg">
@@ -441,19 +446,38 @@
       transition: 'fade down'
     });
 
-    $('#searchIconSpan').onclick = function()
-    {
-      $('#searchForm').submit();
-      console.log("form submitted");
-    }
+    $('#searchIcon').click(
+      function()
+      {
+        document.getElementById('searchForm').submit();
+        // console.log("form submitted");
+      }
+    );
 
-    $('.likeButton').onclick = function()
-    {
-      console.log("clicke?!");
-      console.log(this);
-      console.log($(this));
-      return false;
-    }
+    var liked1 = false;
+
+    $('#likeButton1').click(
+      function()
+      {
+        var count1 = parseInt($('#likeCount1').text());
+        if (!liked1)
+        {
+          $('#likeCount1').text(String(count1 + 1));
+          liked1 = true;
+          $('#likeButton1').html(
+            '<i class="thumbs outline down icon"></i>&nbsp;&nbsp;Unlike'
+          );
+        }
+        else
+        {
+          $('#likeCount1').text(String(count1 - 1));
+          liked1 = false;
+          $('#likeButton1').html(
+            '<i class="thumbs outline up icon"></i>&nbsp;&nbsp;Like'
+          );
+        }
+      }
+    );
 
     var content = [
     {
