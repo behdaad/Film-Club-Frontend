@@ -433,6 +433,13 @@
         
 <script>
     $('.ui .rating').rating('setting', 'clearable', true);
+    $('#notificationsItem').popup({
+    on: 'click',
+    inline: true,
+    transition: 'fade down'
+    });
+
+
     var commentWindowLink = document.getElementById('commentWindow');
     commentWindowLink.onclick = function()
     {
@@ -444,6 +451,58 @@
       }
       return false;
     }
+
+    $('#searchIcon').click(
+    function()
+    {
+      $('#searchForm').submit();
+    }
+    );
+
+    var content = [
+  {
+    title: 'Steve Jobs',
+    description: 'User',
+  },
+  {
+    title: 'Steve Jobs',
+    description: 'Movie',
+  },
+  {
+    title: 'Inside Job',
+    description: 'Movie',
+  },
+  {
+    title: 'The Italian Job',
+    description: 'Movie',
+  },
+  {
+    title: 'Enter the Matrix',
+    description: 'Movie'
+  },
+  {
+    title: 'Matrix Reloaded',
+    description: 'Movie'
+  },
+  {
+    title: 'Matrix Revolutions',
+    description: 'Movie'
+  },
+  {
+    title: 'Steven Wilson',
+    description: 'User'
+  }
+  ];
+
+  $('.ui.search').search(
+  {
+    source: content,
+    searchFields: [ 'title' ],
+    transition: 'fade down'
+  }
+  );
+
+
 </script>
 </body>
 </html>
