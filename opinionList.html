@@ -166,7 +166,9 @@
         <div class="ui segment">
           <div class="ui segment">
             <div class="ui vertical segment">
-              <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/stevie.jpg" />
+              <a href="userProfile.html">
+                <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/stevie.jpg" />
+              </a>
               <div class="ui tiny header">
                 <a href="userProfile.html">Stevie Works</a>
               </div>
@@ -179,21 +181,93 @@
                 The best thing about Interstellar is that, like Inception, the science and the ideas are as real, as sophisticated, and as advanced, as any ideas out there. If you see a critic or somebody saying this is convoluted or overly complex that says more about their lack of understanding than about the movie. We should be thrilled Nolan is thinking about and making movies about these things. Bravo.
               </p>
             </div>
+            <!-- like segment -->
             <div class="ui vertical segment">
-              <i class="large thumbs outline up icon link icon"></i>
-              <span class="likeText">12 people like this.</span>
-            </div>
-            <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <div class="ui input">
-                <input type="text" placeholder="Type your comment here." />
+              <div class="ui grid">
+                <div class="row">
+                  <div class="eight wide column" style="padding-left: 15px; width: 120px !important;">
+                    <div class="ui basic labeled left icon blue button likeButton" id="likeButton1">
+                      <i class="thumbs outline up icon"></i>
+                      Like
+                    </div>
+                  </div>
+                  <div class="eight wide column">
+                    <div class="ui mini horizontal statistic" style="margin-top: 5px;">
+                      <div class="value likeCount" id="likeCount1">34</div>
+                      <div class="label">people like this.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- like segment end -->
+            <!-- comments segment -->
+            <div class="ui vertical segment">
+              <form class="ui reply form commentForm">
+                <div class="field">
+                  <div class="ui action input">
+                    <input type="text" placeholder="Type your comment..." id="commentText1">
+                    <button class="ui small blue right labeled icon button commentButton" id="commentButton1">
+                      <i class="comment outline icon"></i>
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h4 class="ui dividing header"><span id="commentsCount1">3</span> Comments</h4>
+              <div class="ui comments" id="comments1">
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/matt.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author" href="userProfile.html">Matt Telbas</a>
+                    <div class="metadata">
+                      <span class="date">Today at 5:42PM</span>
+                    </div>
+                    <div class="text">
+                      How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/jenny.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Jenny Hess</a>
+                    <div class="metadata">
+                      <span class="date">Yesterday at 12:30AM</span>
+                    </div>
+                    <div class="text">
+                      <p>This has been very useful for my "research". Thanks as well!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/joe.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- comments segment end -->
           </div>
 
           <div class="ui segment">
             <div class="ui vertical segment">
-              <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" />
+              <a href="userProfile.html">
+                <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/steve.jpg" />
+              </a>
               <div class="ui tiny header">
                 <a href="userProfile.html">Brent Marchant</a> 
               </div>
@@ -205,21 +279,79 @@
                 A surprisingly underwhelming offering sorely in need of judicious editing, better writing and a clearer focus. Despite capable performances by Matthew McConaughey, Matt Damon and Jessica Chastain, as well as an emotive score and terrific sound, the picture suffers from largely mediocre special effects, uneven pacing, underdeveloped characters, bland supporting performances and a choppy, bloated script. When telling a tale that aspires to epic heights, the worst offense a director can commit is to make the story boring, which is precisely what has happened here. Don't believe the hype; this release is far from what it could and should have been.
               </p>
             </div>
+            <!-- like segment -->
             <div class="ui vertical segment">
-              <i class="large thumbs outline up icon link icon"></i>
-              <span class="likeText">You and 12 others like this.</span>
-            </div>
-            <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <div class="ui input">
-                <input type="text" placeholder="Type your comment here." />
+              <div class="ui grid">
+                <div class="row">
+                  <div class="eight wide column" style="padding-left: 15px; width: 120px !important;">
+                    <div class="ui basic labeled left icon blue button likeButton" id="likeButton2">
+                      <i class="thumbs outline up icon"></i>
+                      Like
+                    </div>
+                  </div>
+                  <div class="eight wide column">
+                    <div class="ui mini horizontal statistic" style="margin-top: 5px;">
+                      <div class="value likeCount" id="likeCount2">2</div>
+                      <div class="label">people like this.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- like segment end -->
+            <!-- comments segment -->
+            <div class="ui vertical segment">
+              <form class="ui reply form commentForm">
+                <div class="field">
+                  <div class="ui action input">
+                    <input type="text" placeholder="Type your comment..." id="commentText2">
+                    <button class="ui small blue right labeled icon button commentButton" id="commentButton2">
+                      <i class="comment outline icon"></i>
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h4 class="ui dividing header"><span id="commentsCount2">2</span> Comments</h4>
+              <div class="ui comments" id="comments2">
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/matt.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author" href="userProfile.html">Matt Telbas</a>
+                    <div class="metadata">
+                      <span class="date">Today at 5:42PM</span>
+                    </div>
+                    <div class="text">
+                      How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/joe.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- comments segment end -->
           </div>
 
           <div class="ui segment">
             <div class="ui vertical segment">
-              <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/elliot.jpg" />
+              <a href="userProfile">
+                <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/elliot.jpg" />
+              </a>
               <div class="ui small header">
                 <a href="userProfile.html">Leonard Hofstadter</a>
               </div>
@@ -231,19 +363,105 @@
                 Music perfectly falls on the picture, the story can not tear myself away from the screen for almost three hours. This is simply the best modern sci-fi film. And don't forget, story based on Kip Thorne works, and theoretically it can be true! ^_^
               </p>
             </div>
+            <!-- like segment -->
             <div class="ui vertical segment">
-              <i class="large thumbs outline up icon link icon"></i>
-              <span class="likeText">12 people like this.</span>
-            </div>
-            <div class="ui vertical segment">
-              <i class="large comment outline icon link icon"></i>
-              <div class="ui input">
-                <input type="text" placeholder="Type your comment here." />
+              <div class="ui grid">
+                <div class="row">
+                  <div class="eight wide column" style="padding-left: 15px; width: 120px !important;">
+                    <div class="ui basic labeled left icon blue button likeButton" id="likeButton3">
+                      <i class="thumbs outline up icon"></i>
+                      Like
+                    </div>
+                  </div>
+                  <div class="eight wide column">
+                    <div class="ui mini horizontal statistic" style="margin-top: 5px;">
+                      <div class="value likeCount" id="likeCount3">34</div>
+                      <div class="label">people like this.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- like segment end -->
+            <!-- comments segment -->
+            <div class="ui vertical segment">
+              <form class="ui reply form commentForm">
+                <div class="field">
+                  <div class="ui action input">
+                    <input type="text" placeholder="Type your comment..." id="commentText3">
+                    <button class="ui small blue right labeled icon button commentButton" id="commentButton3">
+                      <i class="comment outline icon"></i>
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h4 class="ui dividing header"><span id="commentsCount3">4</span> Comments</h4>
+              <div class="ui comments" id="comments3">
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/matt.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author" href="userProfile.html">Matt Telbas</a>
+                    <div class="metadata">
+                      <span class="date">Today at 5:42PM</span>
+                    </div>
+                    <div class="text">
+                      How artistic!
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/jenny.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Jenny Hess</a>
+                    <div class="metadata">
+                      <span class="date">Yesterday at 12:31AM</span>
+                    </div>
+                    <div class="text">
+                      <p>Pardon?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/jenny.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Jenny Hess</a>
+                    <div class="metadata">
+                      <span class="date">Yesterday at 12:30AM</span>
+                    </div>
+                    <div class="text">
+                      <p>This has been very useful for my "research". Thanks as well!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a href="userProfile.html" class="avatar">
+                    <img src="img/avatar/joe.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author"  href="userProfile.html">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- comments segment end -->
           </div>
 
-          <div class="ui segment">
+          <!-- 2 more posts -->
+
+          <!-- <div class="ui segment">
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/matt.jpg" />
               <div class="ui small header">
@@ -267,9 +485,9 @@
                 <input type="text" placeholder="Type your comment here." />
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="ui segment">
+          <!-- <div class="ui segment">
             <div class="ui vertical segment">
               <img class="ui tiny avatar left floated middle aligned image" src="img/avatar/jenny.jpg" />
               <div class="ui small header">
@@ -293,7 +511,7 @@
                 <input type="text" placeholder="Type your comment here." />
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- main column end -->
