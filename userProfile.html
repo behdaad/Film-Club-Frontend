@@ -513,16 +513,15 @@
         </div> 
         <div class="ui segment" id="chatSegment" style="display:none; padding-top:0px;">
           <i id="closeChat" class="right floated compact ui close icon link icon"></i>
-          <div class="small header" id="chatHeader">
-          </div>
+          <div class="small header" id="chatHeader"></div>
         </div>
       </div>
       <!-- chat column end -->
     </div>
   </div>
-<script>
-  $('.ui.rating').rating('disable');
-  $('.film.popup').popup({});
+  <script>
+    $('.ui.rating').rating('disable');
+    $('.film.popup').popup({});
     $('#notificationsItem').popup({
       on: 'click',
       inline: true,
@@ -572,17 +571,46 @@
     );
 
     var hell;
+    var chatOpen = false;
     $('.chat').on("click", function(){
-      $('#chatSegment').show();
-      hell = $(this);
-      var name = $(this).children()[2].children[0].textContent;
-      $('#chatHeader').append(name);
+      if (!chatOpen)
+      {
+        $('#chatSegment').show();
+        hell = $(this);
+        var name = $(this).children()[2].children[0].textContent;
+        $('#chatHeader').append(name);
+        chatOpen = true;
+        $('#chatSegment').append(
+          '<div class="ui message">\
+          Hello! You there?\
+        </div>'
+        );
+        $('#chatSegment').append(
+          '<div class="ui blue message">\
+          Well yes! How are you man?\
+        </div>'
+        );
+
+        $('#chatSegment').append(
+        '<form class="ui reply form commentForm">\
+            <div class="field">\
+              <div class="ui action input">\
+                <input type="text">\
+                <button class="ui small blue icon button commentButton" id="commentButton3">\
+                  <i class="comment outline icon"></i>\
+                </button>\
+              </div>\
+            </div>\
+          </form>'
+        );
+      }
     });
 
     $('#closeChat').on("click", function(){
       $('#chatSegment').hide();
+      chatOpen = false;
       $('#chatHeader').text("");
     });
-</script>
+  </script>
 </body>
 </html>
