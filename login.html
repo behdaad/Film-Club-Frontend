@@ -119,13 +119,14 @@
   <!-- Forgot password modal end -->
 
   <script>
-    var forgotPasswordLink = document.getElementById('forgotPasswordLink');
-    forgotPasswordLink.onclick = function()
-    {
-      // console.log('forgot password link clicked');
-      $('#forgotPasswordModal').modal('show');
-      return false;
-    }
+    $('#forgotPasswordLink').click(
+      function()
+      {
+        // console.log('forgot password link clicked');
+        $('#forgotPasswordModal').modal('show');
+        return false;
+      }
+    );
 </script>
 </body>
 </html>
